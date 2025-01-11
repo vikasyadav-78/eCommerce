@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: poppins;
+}
+
+html,body {
+height:100%;
+width:100%;
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+    border: none;
+}
+.firstClass{
+    background-image: url(../shopImages/Rectangle\ 1.png);
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainorder:hover .topposition {
+    /* display: block; */
+    opacity: 1;
+}
+.positions {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+.topposition {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 100%;
+    background-color: #555453a0;
+    top: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+    /* display: none; */
+    opacity: 0;
+}
+.upcart {
+    border: none;
+    width: 60%;
+}
+.up {
+    background-color: #e97171;
+    color: #fbe5e5;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.positions2{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+.new{
+    background-color: #2ec1ac;
+    color: #fbe5e5;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.margintop{
+    margin-top: -110px !important;
+}
+.emailButton{
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:576px) {
+    .mediatext {
+        text-align: center;
+    }
+}
