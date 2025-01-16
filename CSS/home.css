@@ -13,7 +13,7 @@ body {
 }
 
 .main-back {
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -146,9 +146,28 @@ body {
 .margintop{
     margin-top: -140px !important;
 }
-
-
-
+.carts{
+    /* position: fixed;
+    bottom: 0 !important; */
+    height: 110px;
+    /* padding-top: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #dadada; */
+}
+.offcanvas-header{
+    height: 80px;
+}
+.offcanvas-body{
+    max-height: calc(100vh -190px);
+    overflow: auto;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.offcanvaswidth{
+    height: 100vh !important; 
+    /* width: 35% !important; */
+} 
 
 
 
