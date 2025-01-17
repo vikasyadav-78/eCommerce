@@ -29,3 +29,15 @@ body {
     outline: none;
     border: none;
 }
+.button2{
+    background-color: #f9f1e7;
+    color: #000;
+    border: none;
+    border-radius: 7px;
+}
+.button1{
+    background-color: #b88e2f;
+    color: #000;
+    border: none;
+    border-radius: 7px;
+}
