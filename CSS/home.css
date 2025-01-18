@@ -24,10 +24,12 @@ body {
 .button {
     background-color: #b88e2f;
     border: 1.5px solid #b88e2f;
+    transition: all 0.5s ease;
 }
 .button:hover{
     background-color: transparent;
     border: 1.5px solid #b88e2f;
+    color: #b88e2f;
 }
 
 .mainchild {
@@ -39,11 +41,12 @@ body {
 .sectionNone {
     background-color: #fff3e3;
     min-height: 55vh;
-    width: 100%;
+    width: 100% !important;
 }
 
 .medianone {
     display: none;
+    width: 100%;
     /* opacity: 0; */
 }
 
@@ -97,7 +100,8 @@ body {
     color: #c5a356;
     background-color: transparent;
     border: 2px solid #c5a356;
-    width: auto;
+    /* width: auto; */
+    transition: all 0.5s ease;
     
 }
 .more:hover{
@@ -123,8 +127,14 @@ body {
 }
 .Explore{
     background-color: #b88e2f;
-    border: none;
+    border: 1.5px solid #b88e2f;
     color: #fff;
+    transition: all 0.5s ease;
+}
+.Explore:hover{
+    background-color: transparent;
+    color: #b88e2f;
+
 }
 .bedroom{
     /* line-height: 10px; */
@@ -193,7 +203,7 @@ body {
 
     .medianone {
         display: block;
-        /* opacity: 1; */
+        width: 100%;
     }
     .margintop{
         margin-top: -10px !important;

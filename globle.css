@@ -48,3 +48,7 @@ width:100%;
     border: none;
     text-decoration: underline;
 }
+.hoverUnderline:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

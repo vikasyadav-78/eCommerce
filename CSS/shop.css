@@ -109,9 +109,15 @@ width:100%;
     margin-top: 20px;
     border-top: 1px solid #dadada; */
 }
-
-
-
+.buttonColor{
+    background-color: #0000001a; 
+    border: none;
+    transition: all 0.4s ease;
+}
+.buttonColor:hover{
+    background-color: #b88e2f;
+    color: #fff;
+}
 
 
 
