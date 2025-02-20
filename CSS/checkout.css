@@ -22,5 +22,11 @@ body {
 .button{
     background-color: transparent;
     border-radius: 15px;
-    border: 1.5px solid #00000073;
+    border: 2px solid #00000073;
+    transition: all .5s ease;
+}
+.button:hover{
+    background-color: #b88e2f;
+    border: 2ps solid #b88f2f9c;
+    
 }

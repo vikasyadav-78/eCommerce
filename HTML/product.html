@@ -34,16 +34,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto gap-4 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5501/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Shop</a>
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5501/HTML/Shop.html">Shop</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About</a>
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5501/HTML/blog.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5501/HTML/contact.html">Contact</a>
             </li>
 
           </ul>
@@ -64,7 +64,8 @@
       aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header border-bottom mb-2">
         <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
-        <button type="button" class="btn btn-outline-dark ms-auto border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-bag-shopping fs-3"></i></button>
+        <button type="button" class="btn btn-outline-dark ms-auto border-0" data-bs-dismiss="offcanvas"
+          aria-label="Close"><i class="fa-solid fa-bag-shopping fs-3"></i></button>
       </div>
       <div class="offcanvas-body">
         <div>
@@ -111,12 +112,12 @@
         </div>
 
         <div class="mt-3 d-flex justify-content-around align-items-center gap-2">
-          <button class="px-4 py-1 rounded-5"
-            style="background-color: transparent; border: 1px solid;width: 100%;">Cart</button>
-          <button class="px-4 py-1 rounded-5"
-            style="background-color: transparent; border: 1px solid;width: 100%;">Checkout</button>
-          <button class="px-4 py-1 rounded-5"
-            style="background-color: transparent; border: 1px solid;width: 100%;">Comparison</button>
+          <a href="http://127.0.0.1:5501/HTML/carts.html"><button class="px-4 py-1 rounded-5"
+              style="background-color: transparent; border: 1px solid;width: 100%;">Cart</button></a>
+          <a href="http://127.0.0.1:5501/HTML/checkout.html"><button class="px-4 py-1 rounded-5"
+              style="background-color: transparent; border: 1px solid;width: 100%;">Checkout</button></a>
+          <a href="http://127.0.0.1:5501/HTML/productComparison.html"><button class="px-4 py-1 rounded-5"
+              style="background-color: transparent; border: 1px solid;width: 100%;">Comparison</button></a>
         </div>
       </div>
     </div>
@@ -285,7 +286,9 @@
                 </div>
                 <div class="topposition p-4">
                   <div class="text-center ">
-                    <button class="upcart"> Add to cart</button>
+                    <a href="http://127.0.0.1:5501/HTML/product.html">
+                      <button class="upcart"> Add to cart</button>
+                  </a>
                     <div class="d-flex gap-3 text-light mt-3">
                       <p><i class="fa-solid fa-share-nodes"></i> Share</p>
                       <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</p>
@@ -306,7 +309,9 @@
                 </div>
                 <div class="topposition p-4">
                   <div class="text-center ">
-                    <button class="upcart"> Add to cart</button>
+                    <a href="http://127.0.0.1:5501/HTML/product.html">
+                      <button class="upcart"> Add to cart</button>
+                  </a>
                     <div class="d-flex gap-3 text-light mt-3">
                       <p><i class="fa-solid fa-share-nodes"></i> Share</p>
                       <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</p>
@@ -330,7 +335,9 @@
                 </div>
                 <div class="topposition p-4">
                   <div class="text-center ">
-                    <button class="upcart"> Add to cart</button>
+                    <a href="http://127.0.0.1:5501/HTML/product.html">
+                      <button class="upcart"> Add to cart</button>
+                  </a>
                     <div class="d-flex gap-3 text-light mt-3">
                       <p><i class="fa-solid fa-share-nodes"></i> Share</p>
                       <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</p>
@@ -353,7 +360,9 @@
                 </div>
                 <div class="topposition p-4">
                   <div class="text-center ">
-                    <button class="upcart"> Add to cart</button>
+                    <a href="http://127.0.0.1:5501/HTML/product.html">
+                      <button class="upcart"> Add to cart</button>
+                  </a>
                     <div class="d-flex gap-3 text-light mt-3">
                       <p><i class="fa-solid fa-share-nodes"></i> Share</p>
                       <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</p>
@@ -364,9 +373,7 @@
               </div>
             </div>
             <div style="margin-top: -140px;" class="d-flex align-items-center justify-content-center">
-              <button class="px-5 py-2"
-                style="color: #b88e2f; border: 1px solid #b88e2f; background-color: transparent; border-radius: 2px;">Show
-                More</button>
+              <button class="px-5 py-2 button">Show More</button>
             </div>
 
           </div>
@@ -409,9 +416,11 @@
           <div>
             <p class="opacity-50 ms-4 hoverUnderline">Newsletter</p>
             <div class="me-4 d-flex align-items-center justify-content-center gap-2">
-              <input type="search" class="emailButton" placeholder="Enter Your Email Address">
-              <button class=""
-                style="text-decoration: underline; border: none; outline: none; background-color: transparent;">SUBSCRIBE</button>
+              <form action="">
+                <input type="search" required class="emailButton" placeholder="Enter Your Email Address">
+                <button class=""
+                  style="text-decoration: underline; border: none; outline: none; background-color: transparent;">SUBSCRIBE</button>
+              </form>
             </div>
           </div>
         </div>

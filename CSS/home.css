@@ -117,10 +117,15 @@ body {
 }
 
 .upcart {
-    border: none;
+    border: 2px solid transparent;
     width: 60%;
+    transition: all .5s ease;
 }
-
+.upcart:hover{
+    background-color: #b88e2f;
+    color: #ffff;
+    border: 2px solid #b88e2f;
+}
 .navbar-toggler:focus {
     box-shadow: none !important;
     border: none;

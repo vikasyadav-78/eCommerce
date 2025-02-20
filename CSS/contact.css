@@ -19,10 +19,17 @@ body {
 }
 .button{
     background-color: #b88e2f;
-    border: none;
-
+    border: 2px solid ;
+    transition: all 0.5s ease;
+    color: #ffff;
+    font-weight: bold;
+    
 }
-
+.button:hover{
+    background-color: transparent;
+    border: 2px solid #b88e2f;
+    color: #000;
+}
 
 
 
