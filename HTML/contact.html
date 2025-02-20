@@ -67,7 +67,8 @@
             aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header border-bottom mb-2">
                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
-                <button type="button" class="btn btn-outline-dark ms-auto border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-bag-shopping fs-3"></i></button>
+                <button type="button" class="btn btn-outline-dark ms-auto border-0" data-bs-dismiss="offcanvas"
+                    aria-label="Close"><i class="fa-solid fa-bag-shopping fs-3"></i></button>
             </div>
             <div class="offcanvas-body">
                 <div>
@@ -181,28 +182,30 @@
                     </div>
                     <div class="col-sm-12 col-md-8 col-lg-7">
                         <div>
-                            <div>
-                                <label for="" class="fw-semibold">Your name</label><br>
-                                <input type="text" class="Abc mt-3 px-3 py-2 rounded-3" required placeholder="Abc">
-                            </div>
-                            <div class="mt-4">
-                                <label for="" class="fw-semibold">Email address</label><br>
-                                <input type="email" class="Abc mt-3 px-3 py-2 rounded-3" required
-                                    placeholder="Abc@def.com">
-                            </div>
-                            <div class="mt-4">
-                                <label for="" class="fw-semibold">Subject</label><br>
-                                <input type="text" class="Abc mt-3 px-3 py-2 rounded-3" required
-                                    placeholder="This is an optional">
-                            </div>
-                            <div class="mt-4">
-                                <label for="" class="fw-semibold">Message</label><br>
-                                <input type="text" class="Abc mt-3 px-3 py-4 rounded-3" required
-                                    placeholder="Hi! i’d like to ask about">
-                            </div>
-                            <div class="mt-4">
-                                <button class="button px-5 py-2 rounded-2 text-light">Submit</button>
-                            </div>
+                            <form action="">
+                                <div>
+                                    <label for="" class="fw-semibold">Your name</label><br>
+                                    <input type="text" class="Abc mt-3 px-3 py-2 rounded-3" required placeholder="Abc">
+                                </div>
+                                <div class="mt-4">
+                                    <label for="" class="fw-semibold">Email address</label><br>
+                                    <input type="email" class="Abc mt-3 px-3 py-2 rounded-3" required
+                                        placeholder="Abc@def.com">
+                                </div>
+                                <div class="mt-4">
+                                    <label for="" class="fw-semibold">Subject</label><br>
+                                    <input type="text" class="Abc mt-3 px-3 py-2 rounded-3" required
+                                        placeholder="This is an optional">
+                                </div>
+                                <div class="mt-4">
+                                    <label for="" class="fw-semibold">Message</label><br>
+                                    <input type="text" class="Abc mt-3 px-3 py-4 rounded-3" required
+                                        placeholder="Hi! i’d like to ask about">
+                                </div>
+                                <div class="mt-4">
+                                    <button class="button px-5 py-2 rounded-2 text-light">Submit</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -296,9 +299,11 @@
                     <div>
                         <p class="opacity-50 ms-4 hoverUnderline">Newsletter</p>
                         <div class="me-4 d-flex align-items-center justify-content-center gap-2">
-                            <input type="search" class="emailButton" placeholder="Enter Your Email Address">
-                            <button class=""
-                                style="text-decoration: underline; border: none; outline: none; background-color: transparent;">SUBSCRIBE</button>
+                            <form action="">
+                                <input type="search" required class="emailButton" placeholder="Enter Your Email Address">
+                                <button class=""
+                                    style="text-decoration: underline; border: none; outline: none; background-color: transparent;">SUBSCRIBE</button>
+                            </form>
                         </div>
                     </div>
                 </div>
