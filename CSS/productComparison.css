@@ -40,3 +40,15 @@
     margin-bottom: 20px;
     padding-bottom: 40px;
 }
+.button2{
+    background-color: #b88e2f;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    transition: all .5s ease;
+}
+.button2:hover{
+    background-color: #fff;
+    color: #b88e2f;
+    border: 2px solid #b88e2f;
+}

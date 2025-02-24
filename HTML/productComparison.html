@@ -42,7 +42,8 @@
                                 href="http://127.0.0.1:5501/HTML/Shop.html">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5501/HTML/blog.html">About</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="http://127.0.0.1:5501/HTML/blog.html">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
@@ -67,7 +68,8 @@
             aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header border-bottom mb-2">
                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
-                <button type="button" class="btn btn-outline-dark ms-auto border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-bag-shopping fs-3"></i></button>
+                <button type="button" class="btn btn-outline-dark ms-auto border-0" data-bs-dismiss="offcanvas"
+                    aria-label="Close"><i class="fa-solid fa-bag-shopping fs-3"></i></button>
             </div>
             <div class="offcanvas-body">
                 <div>
@@ -186,10 +188,20 @@
                     <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
                         <div>
                             <p class="fs-5 fw-semibold text-center">Add A Product</p>
-                            <button style="background-color: #b88e2f; border: none;"
-                                class="rounded-3 d-flex align-items-center justify-content-around py-2 w-100 ">
-                                <p class="mb-0 text-light">Choose a Product</p>
-                                <p class="mb-0 text-light"><i class="fa-solid fa-angle-down"></i></p>
+                            <button style="background-color: #b88e2f; border: none;" class="rounded-3 py-2 w-100 ">
+                                <form class="d-flex flex-column" action="http://127.0.0.1:5501/HTML/productComparison.html">
+                                    <label for="cars" class="mb-0 mt-2 fw-bold text-light" >Choose a Product : </label>
+                                    <select id="cars" name="cars" class="border-light border-2 rounded-2 mt-3 w-75 mx-auto text-light fw-semibold"
+                                        style="background-color: #b88e2f; outline: none;">
+                                        <option class="mb-0 text-primary fw-semibold bg-warning-subtle" value="Asgaard">Asgaard Sofa</option>
+                                        <option class="mb-0 text-primary fw-semibold bg-warning-subtle" value="Outdoor">Outdoor Sofa Set</option>
+                                        <option class="mb-0 text-primary fw-semibold bg-warning-subtle" value="Casaliving">Casaliving Wood</option>
+                                        <option class="mb-0 text-primary fw-semibold bg-warning-subtle" value="Dining">Dining</option>
+                                        <option class="mb-0 text-primary fw-semibold bg-warning-subtle" value="Living">Living</option>
+                                        <option class="mb-0 text-primary fw-semibold bg-warning-subtle" value="Bedroom">Bedroom</option>
+                                    </select>
+                                    <input class="w-50 mx-auto mt-3 rounded-2 button2" type="submit">
+                                </form>
                             </button>
                         </div>
                     </div>
