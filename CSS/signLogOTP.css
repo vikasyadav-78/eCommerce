@@ -217,3 +217,40 @@ input:focus {
 .reset:hover{
   text-decoration: underline;
 }
+
+.otp-input{
+  height: 55px;
+  width: 55px;
+  text-align: center;
+}
+
+.otp-Input-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 
+  20px;
+}
+.otp{
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem 1.3rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.otp:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
