@@ -20,12 +20,12 @@ function getInputNumberFrom() {
         alert("Please enter a secure password");
     } else if (password_value.length <= 8) {
         alert("Password must be 8 characters minimum and strong password")
-    } else if(password_value.length>=8){
+    } else if (password_value.length >= 8) {
         alert("Get OTP")
-    }else {
-       input.classList.remove("form-control-after");
-       input.classList.add("form-control-active")
-   }
+    } else {
+        input.classList.remove("form-control-after");
+        input.classList.add("form-control-active")
+    }
 
 };
 
@@ -36,20 +36,20 @@ function sumbitForm(event) {
 form.addEventListener('submit', sumbitForm)
 
 
-function showPassword(){
+function showPassword() {
+    let passwordInput = document.getElementById("password-input");
     let password_Show = document.querySelector(".password-Show");
+    let password_hide = document.querySelector(".hide-password")
 
-    password_Show.addEventListener('click' , () =>{
-        let passwordInput = document.getElementById("password-input").type = 'text';
+    password_Show.addEventListener('click', () => {
+        passwordInput.type = "text";
+        password_hide.style.display = "inline"
+        password_Show.style.display = "none"
     })
-    hidePassword()
-}
-
-function hidePassword(){
-    let hide_password = document.getElementById("password-input").type = 'password'
-
-    hide_password.addEventListener("click" , () =>{
-        let password_Show = document.querySelector(".password-Show")
-        password_Show.classList.remove()  
+    password_hide.addEventListener("click", () => {
+        passwordInput.type = "password"
+        password_Show.style.display = "inline"
+        password_hide.style.display = "none"
     })
 }
+showPassword();

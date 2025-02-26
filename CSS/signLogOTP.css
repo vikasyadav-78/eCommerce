@@ -103,7 +103,7 @@ label {
   display: flex;
 }
 
-.input-with-icon svg {
+.input-with-icon i {
   position: absolute;
   left: 0.75rem;
   top: 50%;
@@ -147,11 +147,11 @@ input:focus {
   background: #2563eb;
 }
 
-.submit-btn svg {
+.submit-btn i {
   transition: transform 0.3s ease;
 }
 
-.submit-btn:hover svg {
+.submit-btn:hover i {
   transform: translateX(4px);
 }
 
@@ -285,28 +285,28 @@ input::-webkit-inner-spin-button {
   box-shadow: 0 0 0 .25rem red !important;
 }
 
-.mainImage{
+.mainImage {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin-bottom: 30px;
 }
-.mainImage p{
+
+.mainImage p {
   font-size: 1.7rem;
   font-weight: bold;
 }
 
-.password-Show{
+.password-Show {
   /* transition: transform 0.3s ease; */
-  left: 90%;
-  display: none;
+  left: 90% !important;
+  cursor: pointer;
+
 }
 
-.showpasswordBtn{
+.hide-password {
+  left: 90% !important;
   cursor: pointer;
-}
-#hide-password{
-  left: 90%;
-  cursor: pointer;
+  display: none;
 }
