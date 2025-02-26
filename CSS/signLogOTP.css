@@ -63,14 +63,11 @@ body {
   display: none;
   padding: 2rem;
 }
-
-/* Show content based on selected tab */
 #login:checked~.login-content,
 #signup:checked~.signup-content {
   display: block;
 }
 
-/* Active tab styles */
 #login:checked~label[for="login"],
 #signup:checked~label[for="signup"] {
   background: #3b82f6;
