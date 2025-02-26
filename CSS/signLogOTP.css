@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #b88f2fc6, #fcf8f3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.539);
+  background: rgb(255, 255, 255);
   border-radius: 1rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   overflow: hidden;
@@ -99,6 +99,8 @@ label {
 
 .input-with-icon {
   position: relative;
+  align-items: center;
+  display: flex;
 }
 
 .input-with-icon svg {
@@ -178,7 +180,7 @@ input:focus {
 }
 
 .switch-link {
-  color: white;
+  color: rgba(0, 0, 255, 0.881);
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
@@ -188,6 +190,7 @@ input:focus {
 
 .text-decoraion {
   text-decoration: none;
+  color: blue !important;
 }
 
 .switch-link:hover {
@@ -280,4 +283,30 @@ input::-webkit-inner-spin-button {
   border-color: #86b7fe !important;
   outline: 0 !important;
   box-shadow: 0 0 0 .25rem red !important;
+}
+
+.mainImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.mainImage p{
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.password-Show{
+  /* transition: transform 0.3s ease; */
+  left: 90%;
+  display: none;
+}
+
+.showpasswordBtn{
+  cursor: pointer;
+}
+#hide-password{
+  left: 90%;
+  cursor: pointer;
 }
