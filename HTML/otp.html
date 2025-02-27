@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get OTP</title>
     <link rel="stylesheet" href="../CSS/signLogOTP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -46,17 +47,15 @@
 
                                 </div>
                             </div>
-                            <a class="reset" href="">reset otp</a>
+                            <div class="optTime">
+                                <a class="reset" href="">reset otp</a>
+                                <p id="timer"></p>
+                            </div>
                         </div>
 
                         <button type="submit" class="submit-btn">
                             Create Account
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12" />
-                                <polyline points="12 5 19 12 12 19" />
-                            </svg>
+                            <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </form>
                 </div>

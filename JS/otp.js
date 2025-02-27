@@ -1,5 +1,3 @@
-
-
 let otp1 = document.getElementById("otp-1");
 let otp2 = document.getElementById("otp-2");
 let otp3 = document.getElementById("otp-3");
@@ -15,7 +13,7 @@ otp1.addEventListener('input', function (e) {
         document.getElementById("otp-1").blur()
         document.getElementById("otp-2").focus()
     }
-})
+});
 otp2.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
         document.getElementById("otp-2").value = e.target.value[0]
@@ -27,13 +25,13 @@ otp2.addEventListener('input', function (e) {
         document.getElementById("otp-2").blur()
         document.getElementById("otp-1").focus()
     }
-})
+});
 otp2.addEventListener('keydown', function (e) {
     if (e.key == "Backspace" && e.target.value.length == 0) {
         document.getElementById("otp-2").blur()
         document.getElementById("otp-1").focus()
     }
-})
+});;
 otp3.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
         document.getElementById("otp-3").value = e.target.value[0]
@@ -45,13 +43,13 @@ otp3.addEventListener('input', function (e) {
         document.getElementById("otp-3").blur()
         document.getElementById("otp-2").focus()
     }
-})
+});
 otp3.addEventListener('keydown', function (e) {
     if (e.key == "Backspace" && e.target.value.length == 0) {
         document.getElementById("otp-3").blur()
         document.getElementById("otp-2").focus()
     }
-})
+});
 otp4.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
         document.getElementById("otp-4").value = e.target.value[0]
@@ -63,13 +61,13 @@ otp4.addEventListener('input', function (e) {
         document.getElementById("otp-4").blur()
         document.getElementById("otp-3").focus()
     }
-})
+});
 otp4.addEventListener('keydown', function (e) {
     if (e.key == "Backspace" && e.target.value.length == 0) {
         document.getElementById("otp-4").blur()
         document.getElementById("otp-3").focus()
     }
-})
+});
 otp5.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
         document.getElementById("otp-5").value = e.target.value[0]
@@ -81,15 +79,13 @@ otp5.addEventListener('input', function (e) {
         document.getElementById("otp-5").blur()
         document.getElementById("otp-4").focus()
     }
-})
-
+});
 otp5.addEventListener('keydown', function (e) {
     if (e.key == "Backspace" && e.target.value.length == 0) {
         document.getElementById("otp-5").blur()
         document.getElementById("otp-4").focus()
     }
-})
-
+});
 otp6.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
         document.getElementById("otp-6").value = e.target.value[0]
@@ -100,10 +96,37 @@ otp6.addEventListener('input', function (e) {
     } else if (e.target.value.length == 1) {
         document.getElementById("otp-6").blur()
     }
-})
+});
 otp6.addEventListener('keydown', function (e) {
     if (e.key == "Backspace" && e.target.value.length == 0) {
         document.getElementById("otp-6").blur()
         document.getElementById("otp-5").focus()
     }
-})
+});
+
+let timer = true;
+
+function timerRang(remaining){
+    let m = Math.floor(remaining / 60);
+    let s = remaining% 60;
+
+    m = m < 10 ? '0' + m : m;
+    s = s < 10 ? '0' + s : s;
+
+    document.getElementById("timer").innerHTML = m + ':' + s;
+    remaining -= 1;
+
+    if(remaining >= 0 && timer){
+        setTimeout(function(){
+            timerRang(remaining);
+        }, 1000);
+        return;
+    }
+
+    if(!timer){
+        return;
+    }
+    alert("OTP Time's up    ")
+}
+
+timerRang(120)
