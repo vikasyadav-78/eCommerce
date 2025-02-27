@@ -105,28 +105,22 @@ otp6.addEventListener('keydown', function (e) {
 });
 
 let timer = true;
-
 function timerRang(remaining){
     let m = Math.floor(remaining / 60);
     let s = remaining% 60;
-
     m = m < 10 ? '0' + m : m;
     s = s < 10 ? '0' + s : s;
-
     document.getElementById("timer").innerHTML = m + ':' + s;
     remaining -= 1;
-
     if(remaining >= 0 && timer){
         setTimeout(function(){
             timerRang(remaining);
         }, 1000);
         return;
     }
-
     if(!timer){
         return;
     }
-    alert("OTP Time's up    ")
+    alert("OTP Time's up")
 }
-
 timerRang(120)
