@@ -1,3 +1,5 @@
+
+
 let otp1 = document.getElementById("otp-1");
 let otp2 = document.getElementById("otp-2");
 let otp3 = document.getElementById("otp-3");
@@ -7,8 +9,9 @@ let otp6 = document.getElementById("otp-6");
 
 otp1.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
-        document.getElementById("otp-1").value = e.target.value[0];
-    } else if (e.target.value.length === 1) {
+        document.getElementById("otp-1").value = e.target.value[0]
+    }
+    else if (e.target.value.length == 1) {
         document.getElementById("otp-1").blur()
         document.getElementById("otp-2").focus()
     }
@@ -31,7 +34,6 @@ otp2.addEventListener('keydown', function (e) {
         document.getElementById("otp-1").focus()
     }
 })
-
 otp3.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
         document.getElementById("otp-3").value = e.target.value[0]
@@ -68,7 +70,6 @@ otp4.addEventListener('keydown', function (e) {
         document.getElementById("otp-3").focus()
     }
 })
-
 otp5.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
         document.getElementById("otp-5").value = e.target.value[0]
@@ -88,6 +89,7 @@ otp5.addEventListener('keydown', function (e) {
         document.getElementById("otp-4").focus()
     }
 })
+
 otp6.addEventListener('input', function (e) {
     if (e.target.value.length > 1) {
         document.getElementById("otp-6").value = e.target.value[0]
