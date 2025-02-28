@@ -112,7 +112,7 @@ getOtpBtn.addEventListener('click', () => {
     let otp4 = document.getElementById("otp-4");
     let otp5 = document.getElementById("otp-5");
     let otp6 = document.getElementById("otp-6");
-    if ([otp1, otp2, otp3, otp4, otp5, otp6].every(input => input.value.trim().length === 1)) {
+    if ([otp1, otp2, otp3, otp4, otp5, otp6].every(input => input.value.length === 1)) {
         window.location = "/index.html";
     } else {
         alert("Please enter a valid OTP");
