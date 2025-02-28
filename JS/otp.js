@@ -104,23 +104,38 @@ otp6.addEventListener('keydown', function (e) {
     }
 });
 
+let getOtpBtn = document.querySelector(".submit-btn");
+getOtpBtn.addEventListener('click', () => {
+    let otp1 = document.getElementById("otp-1");
+    let otp2 = document.getElementById("otp-2");
+    let otp3 = document.getElementById("otp-3");
+    let otp4 = document.getElementById("otp-4");
+    let otp5 = document.getElementById("otp-5");
+    let otp6 = document.getElementById("otp-6");
+    if (otp1.value.length == 1 && otp2.value.length == 1 && otp3.value.length == 1 && otp4.value.length == 1 && otp5.value.length == 1 && otp6.value.length == 1) {
+        window.location = "/index.html"
+    } else {
+        alert("Please enter valid otp")
+    }
+})
+
 let timer = true;
-function timerRang(remaining){
+function timerRang(remaining) {
     let m = Math.floor(remaining / 60);
-    let s = remaining% 60;
+    let s = remaining % 60;
     m = m < 10 ? '0' + m : m;
     s = s < 10 ? '0' + s : s;
-    document.getElementById("timer").innerHTML = m + ':' + s;
+    document.getElementById("timer").innerHTML = "resend otp : " + m + ':' + s;
     remaining -= 1;
-    if(remaining >= 0 && timer){
-        setTimeout(function(){
+    if (remaining >= 0 && timer) {
+        setTimeout(function () {
             timerRang(remaining);
         }, 1000);
         return;
     }
-    if(!timer){
+    if (!timer) {
         return;
     }
-    alert("OTP Time's up")
+    alert("OTP Time's Over")
 }
 timerRang(120)

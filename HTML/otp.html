@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get OTP</title>
     <link rel="stylesheet" href="../CSS/otp.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -19,6 +21,7 @@
             <div class="tabs">
                 <input type="radio" name="tabs" id="signup" checked>
                 <div class="content signup-content">
+                    <h1>Verification Code</h1>
                     <form>
                         <div class="input-group">
                             <label>OTP</label>
@@ -42,8 +45,6 @@
                                     <div class="otp-input">
                                         <input type="number" class="otp" min="0" max="9" id="otp-6" required>
                                     </div>
-
-
                                 </div>
                             </div>
                             <div class="optTime">
@@ -51,9 +52,8 @@
                                 <p id="timer"></p>
                             </div>
                         </div>
-
                         <button type="submit" class="submit-btn">
-                            Create Account
+                            Verify OTP
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </form>
@@ -63,4 +63,5 @@
     </div>
 </body>
 <script src="../JS/otp.js"></script>
+
 </html>

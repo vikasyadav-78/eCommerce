@@ -21,7 +21,7 @@ function getInputNumberFrom() {
     } else if (password_value.length <= 8) {
         alert("Password must be 8 characters minimum and strong password")
     } else if (password_value.length >= 8) {
-        alert("Get OTP")
+        window.location = "/index.html"
     } else {
         input.classList.remove("form-control-after");
         input.classList.add("form-control-active")
@@ -45,3 +45,4 @@ function showPassword() {
     })
 }
 showPassword();
+
