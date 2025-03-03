@@ -54,3 +54,57 @@ function showPassword() {
     })
 }
 showPassword();
+
+
+
+let forms = document.getElementById("signin-form")
+function submitForm(event) {
+    event.preventDefault();
+}
+form.addEventListener('submit', submitForm)
+
+function show() {
+    let input = document.getElementById("showpassoword")
+    if (input.type === "password") {
+        input.type = "text";
+
+    } else if (input.type === "text") {
+        input.type = "password";
+    }
+}
+
+
+function signInRequest(mobile, password) {
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+        "mobile": mobile,
+        "password": password
+    });
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    fetch(`${base_url}/api/v1/auth/signin/request`, requestOptions)
+        .then((response) => response.json())
+        .then((result) => {
+            if (result.success && result.message == "Successfully completed the request" && result.data) {
+                localStorage.setItem("uuid", response.data)
+                console.log("otp sended successfully")
+                window.location.href = '/otp page'
+                document.getElementById("showpassoword").value = "";
+                document.getElementById("exampleInputEmail1").value = "";
+            } else if (!result.success) {
+                console.log(error.explanation[0])
+            } else {
+                console.log("something went wrong please try again later")
+            }
+        })
+        .catch((error) => console.error(error));
+}
