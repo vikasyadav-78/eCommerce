@@ -1,3 +1,6 @@
+import base_url from "../export.js"
+// let base_url = "http://localhost:3000"
+
 function getInputNumberFrom() {
     let input = document.getElementById("input-number");
     let value = input.value;
@@ -28,7 +31,6 @@ function getInputNumberFrom() {
     }
 
 };
-
 let form = document.getElementById("signin-form");
 function sumbitForm(event) {
     event.preventDefault();
@@ -73,42 +75,7 @@ function show() {
 }
 
 
-// function signInRequest(mobile, password) {
-
-//     const myHeaders = new Headers();
-//     myHeaders.append("Content-Type", "application/json");
-
-//     const raw = JSON.stringify({
-//         "mobile": mobile,
-//         "password": password
-//     });
-
-//     const requestOptions = {
-//         method: "POST",
-//         headers: myHeaders,
-//         body: raw,
-//         redirect: "follow"
-//     };
-
-//     fetch(`${base_url}/api/v1/auth/signin/request`, requestOptions)
-//         .then((response) => response.json())
-//         .then((result) => {
-//             if (result.success && result.message == "Successfully completed the request" && result.data) {
-//                 localStorage.setItem("uuid", response.data)
-//                 console.log("otp sended successfully")
-//                 window.location.href = '/HTML/otp.html'
-//                 document.getElementById("showpassoword").value = "";
-//                 document.getElementById("exampleInputEmail1").value = "";
-//             } else if (!result.success) {
-//                 console.log(error.explanation[0])
-//             } else {
-//                 console.log("something went wrong please try again later")
-//             }
-//         })
-//         .catch((error) => console.error(error));
-// }
-
-function signInRequest(moblie,password) {
+function signInRequest(moblie, password) {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -118,17 +85,25 @@ function signInRequest(moblie,password) {
     });
 
     const requestOptions = {
-        method: "GET",
+        method: "POST",
         headers: myHeaders,
         body: raw,
         redirect: "follow"
     };
 
-    fetch("localhost:3000/api/v1/auth/signin/request", requestOptions)
+    fetch(`${base_url}/api/v1/auth/signin/request`, requestOptions)
         .then((response) => response.text())
         .then((result) => {
-            if(result.success && result.message === "Successfully completed the request" && result.data){
-                localStorage.setItem("uuid",result.data)
+            if (result.success && result.message === "Successfully completed the request" && result.data) {
+                localStorage.setItem("uuid", result.data)
+                window.location.href = "/HTML/otp.html"
+
+                document.getElementById("input-number").value = "";
+                document.getElementById("password-input").value = "";
+            } else if (!result.success) {
+                console.log(error.explanation[0])
+            } else {
+                console.log("something went wrong please try again later")
             }
         })
         .catch((error) => console.error(error));
