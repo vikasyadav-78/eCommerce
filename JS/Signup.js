@@ -20,12 +20,11 @@ function getInputNumberFrom() {
         alert("Please enter a secure password");
     } else if (password_value.length <= 8) {
         alert("Password must be 8 characters minimum and strong password")
-    } else if (password_value.length >= 8) {
-        window.location = "/HTML/otp.html"
-        alert("Get OTP")
     } else {
+        window.location = "/HTML/otp.html"
         input.classList.remove("form-control-after");
         input.classList.add("form-control-active")
+        signInRequest(value, password_value)
     }
 
 };
@@ -74,36 +73,62 @@ function show() {
 }
 
 
-function signInRequest(mobile, password) {
+// function signInRequest(mobile, password) {
 
+//     const myHeaders = new Headers();
+//     myHeaders.append("Content-Type", "application/json");
+
+//     const raw = JSON.stringify({
+//         "mobile": mobile,
+//         "password": password
+//     });
+
+//     const requestOptions = {
+//         method: "POST",
+//         headers: myHeaders,
+//         body: raw,
+//         redirect: "follow"
+//     };
+
+//     fetch(`${base_url}/api/v1/auth/signin/request`, requestOptions)
+//         .then((response) => response.json())
+//         .then((result) => {
+//             if (result.success && result.message == "Successfully completed the request" && result.data) {
+//                 localStorage.setItem("uuid", response.data)
+//                 console.log("otp sended successfully")
+//                 window.location.href = '/HTML/otp.html'
+//                 document.getElementById("showpassoword").value = "";
+//                 document.getElementById("exampleInputEmail1").value = "";
+//             } else if (!result.success) {
+//                 console.log(error.explanation[0])
+//             } else {
+//                 console.log("something went wrong please try again later")
+//             }
+//         })
+//         .catch((error) => console.error(error));
+// }
+
+function signInRequest(moblie,password) {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     const raw = JSON.stringify({
-        "mobile": mobile,
+        "mobile": moblie,
         "password": password
     });
 
     const requestOptions = {
-        method: "POST",
+        method: "GET",
         headers: myHeaders,
         body: raw,
         redirect: "follow"
     };
 
-    fetch(`${base_url}/api/v1/auth/signin/request`, requestOptions)
-        .then((response) => response.json())
+    fetch("localhost:3000/api/v1/auth/signin/request", requestOptions)
+        .then((response) => response.text())
         .then((result) => {
-            if (result.success && result.message == "Successfully completed the request" && result.data) {
-                localStorage.setItem("uuid", response.data)
-                console.log("otp sended successfully")
-                window.location.href = '/otp page'
-                document.getElementById("showpassoword").value = "";
-                document.getElementById("exampleInputEmail1").value = "";
-            } else if (!result.success) {
-                console.log(error.explanation[0])
-            } else {
-                console.log("something went wrong please try again later")
+            if(result.success && result.message === "Successfully completed the request" && result.data){
+                localStorage.setItem("uuid",result.data)
             }
         })
         .catch((error) => console.error(error));
