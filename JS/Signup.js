@@ -1,6 +1,9 @@
 import base_url from "../export.js"
 // let base_url = "http://localhost:3000"
 
+let submit_btn = document.getElementById("submit-btn");
+submit_btn.addEventListener("click" , getInputNumberFrom)
+
 function getInputNumberFrom() {
     let input = document.getElementById("input-number");
     let value = input.value;
@@ -24,7 +27,7 @@ function getInputNumberFrom() {
     } else if (password_value.length <= 8) {
         alert("Password must be 8 characters minimum and strong password")
     } else {
-        window.location = "/HTML/otp.html"
+        // window.location = "/HTML/otp.html"
         input.classList.remove("form-control-after");
         input.classList.add("form-control-active")
         signInRequest(value, password_value)
@@ -97,7 +100,6 @@ function signInRequest(moblie, password) {
             if (result.success && result.message === "Successfully completed the request" && result.data) {
                 localStorage.setItem("uuid", result.data)
                 window.location.href = "/HTML/otp.html"
-
                 document.getElementById("input-number").value = "";
                 document.getElementById("password-input").value = "";
             } else if (!result.success) {
