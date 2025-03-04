@@ -214,7 +214,7 @@ body {
 }
 
 
-#loading{
+#loading {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -234,9 +234,10 @@ body {
     border: 2px solid #FF3D00;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-  }
-  .loader::after {
-    content: '';  
+}
+
+.loader::after {
+    content: '';
     box-sizing: border-box;
     position: absolute;
     left: 4px;
@@ -245,16 +246,17 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-  }
-      
-  @keyframes rotation {
+}
+
+@keyframes rotation {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  } 
+}
 
 @keyframes rotation {
     0% {

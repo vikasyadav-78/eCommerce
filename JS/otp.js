@@ -1,6 +1,6 @@
 let uuid = localStorage.getItem("uuid")
-if(!uuid){
-    window.location.href="/HTML/signUp.html"
+if (!uuid) {
+    window.location.href = "/HTML/signUp.html"
 }
 
 
@@ -123,7 +123,7 @@ getOtpBtn.addEventListener('click', () => {
     } else {
         alert("Please enter a valid OTP");
     }
-    
+
 })
 let timer = true;
 function timerRang(remaining) {

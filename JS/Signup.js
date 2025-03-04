@@ -2,7 +2,7 @@ import base_url from "../export.js"
 // let base_url = "http://localhost:3000"
 
 let submit_btn = document.getElementById("submit-btn");
-submit_btn.addEventListener("click" , getInputNumberFrom)
+submit_btn.addEventListener("click", getInputNumberFrom)
 
 function getInputNumberFrom() {
     let input = document.getElementById("input-number");
