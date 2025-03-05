@@ -82,10 +82,30 @@ let datas = [
         p6: "Like"
     },
     {
-        images: "../HomeImages/Images.png",
-        p1: "Grifo",
-        p2: "Night lamp",
-        p3: "Rp 1.500.000",
+        images: "../HomeImages/image 6.png",
+        p1: "Muggo",
+        p2: "Small mug",
+        p3: "Rp 150.000",
+        btn: "Add to cart",
+        p4: "Share",
+        p5: "Compare",
+        p6: "Like"
+    },
+    {
+        images: "../HomeImages/Images (1).png",
+        p1: "Pingky",
+        p2: "Cute bed set",
+        p3: `Rp 7.000.000 <span class="opacity-50"><del>Rp 14.000.000</del></span>`,
+        btn: "Add to cart",
+        p4: "Share",
+        p5: "Compare",
+        p6: "Like"
+    },
+    {
+        images: "../HomeImages/Images (2).png",
+        p1: "Potty",
+        p2: "Minimalist flower pot",
+        p3: "Rp 500.000",
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
@@ -97,10 +117,10 @@ let main_row = document.getElementById("div-row")
 function getData() {
     datas.map((values) => {
         main_row.innerHTML += `
-            <div class="col-lg-3 col-md-4 col-sm-6 ">
+            <div class="col-lg-3 col-md-4 col-sm-6 mt-3">
                             <div class="bg-body-secondary mainorder position-relative overflow-hidden"
-                                style="height: 70%;">
-                                <img width="100%" height="60%" style="object-fit: cover;"
+                                style="height: 100%;">
+                                <img width="100%" height="70%" style="object-fit: cover;"
                                     src="${values.images}" alt="">
                                 <div class="positions">
                                     <p class="up p-4">-30%</p>
@@ -129,3 +149,8 @@ function getData() {
 } 
 
 getData()
+
+
+function palceHolder(){
+    
+}
