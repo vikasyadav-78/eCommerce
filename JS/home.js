@@ -191,10 +191,14 @@ function placeHolder() {
 };
 placeHolder();
 
+setTimeout(() => {
+    let divRow = document.getElementById("div-row");
+    divRow.style.display = "none"
+}, 0);
 
 setTimeout(() => {
     let mainRow = document.getElementById("main-row");
     mainRow.style.display = "none"
     let divRow = document.getElementById("div-row");
-    divRow.style.display = "felx"
+    divRow.style.display = "flex"
 }, 3000);
