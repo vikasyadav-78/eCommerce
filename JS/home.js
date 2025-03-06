@@ -148,61 +148,53 @@ function getData() {
     })
 }
 
-getData()
-
-{/* <div class="card" aria-hidden="true">
-    <div class="placeholder">
-        <p class="placeholder-glow" style="height: 200px;"></p>
-    </div>
-  <div class="card-body">
-     <h5 class="card-title placeholder-glow d-flex gap-3" style="flex-direction: column;">
-      <span class="placeholder col-3"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-3"></span>
-    </h5>
-                                
-  </div>
-</div> */}
+getData();
 
 function placeHolder() {
-    let main_row = document.getElementById("main-row");
-    let main_div = document.createElement("div")
-    main_div.classList.add("card")
-    main_div.ariaHidden = "true";
-    main_row.appendChild(main_div)
-    let card = document.createElement("div");
-    card.classList.add("col-sm-6", "col-lg-3", "col-md-4", "mt-3");
-    main_div.appendChild(card)
 
-    let img = document.createElement("div");
-    img.classList.add("placeholder");
-    card.appendChild(img);
-    let p = document.createElement("p")
-    p.classList.add("placeholder-glow")
-    p.style.height = "200px"
-    img.appendChild(p)
+    [1, 2, 3, 4, 5, 6, 7, 8].map(() => {
+        let main_row = document.getElementById("main-row");
+        let main_div = document.createElement("div")
+        main_div.classList.add("col-sm-6", "col-lg-3", "col-md-4", "mt-3");
+        main_row.appendChild(main_div)
+        let card = document.createElement("div");
+        card.classList.add("card")
+        card.ariaHidden = "true"
+        main_div.appendChild(card);
+        let card_body = document.createElement("div");
+        card_body.classList.add("card-body")
+        card.appendChild(card_body);
+        let h5 = document.createElement("h5");
+        h5.classList.add("card-title", "placeholder-glow");
+        card_body.appendChild(h5);
+        let span = document.createElement("span");
+        span.classList.add("placeholder", "col-6", "w-100");
+        span.style.height = "200px";
+        h5.appendChild(span);
+        let p = document.createElement("p");
+        p.classList.add("card-text", "placeholder-glow", "d-flex", "gap-3")
+        p.style.flexDirection = "column";
+        card_body.appendChild(p);
+        let span1 = document.createElement("span");
+        span1.classList.add("placeholder", "col-5", "mt-3");
+        span1.style.height = "20px"
+        let span2 = document.createElement("span");
+        span2.classList.add("placeholder", "col-6");
+        span2.style.height = "20px"
+        let span3 = document.createElement("span");
+        span3.classList.add("placeholder", "col-7");
+        span3.style.height = "20px"
+        p.appendChild(span1)
+        p.appendChild(span2)
+        p.appendChild(span3)
+    })
+};
+placeHolder();
 
-    let card_body = document.createElement("div");
-    card_body.classList.add("card-body")
-    card.appendChild(card_body);
 
-    let h5 = document.createElement("h5");
-    h5.classList.add("card-title", "placeholder-glow" , "d-flex", "gap-3");
-    h5.style.flexDirection = "column"
-    card_body.appendChild(h5);
-
-    let span1 = document.createElement("span");
-    span1.classList.add("placeholder","col-3");
-    let span2 = document.createElement("span");
-    span2.classList.add("placeholder","col-3");
-    let span3 = document.createElement("span");
-    span3.classList.add("placeholder","col-3");
-    
-    h5.appendChild(span1)
-    h5.appendChild(span2)
-    h5.appendChild(span3)
-
-
-
-}
-placeHolder()
+setTimeout(() => {
+    let mainRow = document.getElementById("main-row");
+    mainRow.style.display = "none"
+    let divRow = document.getElementById("div-row");
+    divRow.style.display = "felx"
+}, 3000);
