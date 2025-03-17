@@ -48,12 +48,12 @@ function showPassword() {
 
     password_Show.addEventListener('click', () => {
         passwordInput.type = "text";
-        password_hide.style.display = "inline"
+        password_hide.style.display = "block"
         password_Show.style.display = "none"
     })
     password_hide.addEventListener("click", () => {
         passwordInput.type = "password"
-        password_Show.style.display = "inline"
+        password_Show.style.display = "block"
         password_hide.style.display = "none"
     })
 }
@@ -65,7 +65,7 @@ let forms = document.getElementById("signin-form")
 function submitForm(event) {
     event.preventDefault();
 }
-form.addEventListener('submit', submitForm)
+forms.addEventListener('submit', submitForm)
 
 function show() {
     let input = document.getElementById("showpassoword")
@@ -105,8 +105,12 @@ function signInRequest(moblie, password) {
             } else if (!result.success) {
                 console.log(error.explanation[0])
             } else {
+                
                 console.log("something went wrong please try again later")
             }
         })
-        .catch((error) => console.error(error));
+        .catch((error) =>{
+            alert("Something went wrong")
+            console.error(error)
+        });
 }
