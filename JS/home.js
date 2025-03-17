@@ -29,7 +29,8 @@ let datas = [
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
-        p6: "Like"
+        p6: "Like",
+        discounts: "-30%"
     },
     {
         images: "../HomeImages/bdb0310fb379a6b1828809d2c0652533.png",
@@ -39,7 +40,8 @@ let datas = [
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
-        p6: "Like"
+        p6: "Like",
+        discounts: "New"
     },
     {
         images: "../HomeImages/image 3.png",
@@ -49,7 +51,8 @@ let datas = [
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
-        p6: "Like"
+        p6: "Like",
+        discounts: "-30%"
     },
     {
         images: "../HomeImages/image 4.png",
@@ -59,7 +62,8 @@ let datas = [
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
-        p6: "Like"
+        p6: "Like",
+        discounts: "New"
     },
     {
         images: "../HomeImages/Images.png",
@@ -69,7 +73,8 @@ let datas = [
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
-        p6: "Like"
+        p6: "Like",
+        discounts: "-30%"
     },
     {
         images: "../HomeImages/image 6.png",
@@ -79,7 +84,8 @@ let datas = [
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
-        p6: "Like"
+        p6: "Like",
+        discounts: "New"
     },
     {
         images: "../HomeImages/Images (1).png",
@@ -89,7 +95,8 @@ let datas = [
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
-        p6: "Like"
+        p6: "Like",
+        discounts: "-30%"
     },
     {
         images: "../HomeImages/Images (2).png",
@@ -99,7 +106,8 @@ let datas = [
         btn: "Add to cart",
         p4: "Share",
         p5: "Compare",
-        p6: "Like"
+        p6: "Like",
+        discounts: "New"
     }
 ]
 
@@ -113,7 +121,7 @@ function getData() {
                                 <img width="100%" height="70%" style="object-fit: cover;"
                                     src="${values.images}" alt="">
                                 <div class="positions">
-                                    <p class="up p-4">-30%</p>
+                                    <p class="up p-4">${values.discounts}</p>
                                 </div>
                                 <div class="p-3 mediatext">
                                     <p class="fw-bold fs-5" style="margin-top: -10px;">${values.p1}</p>
