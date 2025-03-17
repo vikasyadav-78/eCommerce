@@ -1,24 +1,17 @@
-// function isUserAuthenticated(){
-
-// }
-
-
 function isUserAuthenticated() {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhZGl0eWFrdW1hd2F0MTExQGdtYWlsLmNvbSIsImlhdCI6MTc0MDM3NDYxNSwiZXhwIjoxNzQwNDYxMDE1fQ.nSDr9ZRIp1z1-a1W0OBXdNPB6NMFUVjNWbZGZvR4uz4");
-
     const requestOptions = {
         method: "GET",
         headers: myHeaders,
         redirect: "follow"
     };
-
     fetch("https://admin-dev-backend.edvice.in/ping", requestOptions)
         .then((response) => response.json())
         .then((result) => {
             // if (result.success) {
-            let body = document.getElementsByTagName("body")
-            body[0].children[0].remove()
+            let body = document.getElementsByTagName("body");
+            body[0].children[0].remove();
             // } else {
             // window.location.href = '/HTML/signUp.html'
             // console.log(result.error.explanation)
@@ -26,10 +19,7 @@ function isUserAuthenticated() {
         })
         .catch((error) => console.error(error));
 }
-
-window.onload = isUserAuthenticated
-
-
+window.onload = isUserAuthenticated;
 let datas = [
     {
         images: "../HomeImages/image 1.png",
@@ -117,7 +107,7 @@ let main_row = document.getElementById("div-row")
 function getData() {
     datas.map((values) => {
         main_row.innerHTML += `
-            <div class="col-lg-3 col-md-4 col-sm-6 mt-3">
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-3">
                             <div class="bg-body-secondary mainorder position-relative overflow-hidden"
                                 style="height: 100%;">
                                 <img width="100%" height="70%" style="object-fit: cover;"
@@ -144,14 +134,11 @@ function getData() {
                                 </div>
                             </div>
                         </div>
-        `
+                    `
     })
 }
-
 getData();
-
 function placeHolder() {
-
     [1, 2, 3, 4, 5, 6, 7, 8].map(() => {
         let main_row = document.getElementById("main-row");
         let main_div = document.createElement("div")
@@ -177,16 +164,16 @@ function placeHolder() {
         card_body.appendChild(p);
         let span1 = document.createElement("span");
         span1.classList.add("placeholder", "col-5", "mt-3");
-        span1.style.height = "20px"
+        span1.style.height = "20px";
         let span2 = document.createElement("span");
         span2.classList.add("placeholder", "col-6");
-        span2.style.height = "20px"
+        span2.style.height = "20px";
         let span3 = document.createElement("span");
         span3.classList.add("placeholder", "col-7");
-        span3.style.height = "20px"
-        p.appendChild(span1)
-        p.appendChild(span2)
-        p.appendChild(span3)
+        span3.style.height = "20px";
+        p.appendChild(span1);
+        p.appendChild(span2);
+        p.appendChild(span3);
     })
 };
 placeHolder();
