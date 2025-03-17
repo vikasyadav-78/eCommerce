@@ -96,6 +96,7 @@ let datas = [
         p4: "Share",
         p5: "Compare",
         p6: "Like",
+    
         discounts: "-30%"
     },
     {
