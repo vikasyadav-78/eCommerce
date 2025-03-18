@@ -19,3 +19,14 @@ body {
 .back{
     background-color: #efe6d1;
 }
+
+.checkOut{
+    border: 1.5px solid #84807a;
+    background-color: transparent;
+    transition: all .2s ease;
+}
+.checkOut:hover{
+    background-color: #b88e2f;
+    color: #fff;  
+    border: 1.5px solid transparent;  
+}

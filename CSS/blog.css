@@ -23,6 +23,7 @@ body {
     width: 60%;
     justify-content: center;
     height: 8vh;
+    gap: 30px;
 
 }
 .iconSearch input{
