@@ -10,8 +10,8 @@ function isUserAuthenticated() {
         .then((response) => response.json())
         .then((result) => {
             // if (result.success) {
-            let body = document.getElementsByTagName("body");
-            body[0].children[0].remove();
+            // let body = document.getElementsByTagName("body");
+            // body[0].children[0].remove();
             // } else {
             // window.location.href = '/HTML/signUp.html'
             // console.log(result.error.explanation)
