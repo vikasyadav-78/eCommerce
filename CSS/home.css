@@ -37,7 +37,7 @@ body {
 
 .mainchild {
     background-color: #fff3e3;
-    height: 55vh;
+    height: auto;
     width: 40%;
 }
 
@@ -279,13 +279,11 @@ body {
 }
 
 
-
-
-
-
-
-
 @media (max-width:768px) {
+    .main-back{
+        height: 60vh;
+    }
+
     .mainchild {
         display: none;
     }
