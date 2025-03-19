@@ -125,23 +125,51 @@ getOtpBtn.addEventListener('click', () => {
     }
 
 })
-let timer = true;
-function timerRang(remaining) {
-    let m = Math.floor(remaining / 60);
-    let s = remaining % 60;
-    m = m < 10 ? '0' + m : m;
-    s = s < 10 ? '0' + s : s;
-    document.getElementById("timer").innerHTML = "resend otp : " + m + ':' + s;
-    remaining -= 1;
-    if (remaining >= 0 && timer) {
-        setTimeout(function () {
-            timerRang(remaining);
-        }, 1000);
-        return;
-    }
-    if (!timer) {
-        return;
-    }
-    alert("OTP Time's Over")
+
+// let timer = true;
+// function timerRang(remaining) {
+//     let m = Math.floor(remaining / 60);
+//     let s = remaining % 60;
+//     m = m < 10 ? '0' + m : m;
+//     s = s < 10 ? '0' + s : s;
+//     document.getElementById("timer").innerHTML = "resend otp : " + m + ':' + s;
+//     remaining -= 1;
+//     if (remaining >= 0 && timer) {
+//         setTimeout(function () {
+//             timerRang(remaining);
+//         }, 1000);
+//         return;
+//     }
+//     if (!timer) {
+//         return;
+//     }
+//     alert("OTP Time's Over")
+// }
+// timerRang(120)
+
+
+
+var timer;
+var current_time = 60 
+
+function GetCurrentTimer(counter) {
+    clearInterval(timer)
+        timer = setInterval(() => {
+        let value_1 = Math.floor(counter / 60)
+        let value_2 = Math.floor(counter % 60) 
+        let cart = document.getElementById("timer")
+        cart.innerText = `${value_1}:${value_2<10?"0":""}${value_2}`
+        if(counter<=0){
+            clearInterval(timervalue)
+            document.getElementById('resend').disabled =false
+        }else{
+            counter--
+        }
+    }, 1000);
 }
-timerRang(120)
+let last = document.getElementById("resend")
+last.addEventListener('click',()=> {
+    GetCurrentTimer(current_time)
+
+})
+GetCurrentTimer(60);
