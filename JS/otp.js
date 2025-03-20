@@ -150,26 +150,31 @@ getOtpBtn.addEventListener('click', () => {
 
 
 var timer;
-var current_time = 60 
+// var current_time = 60 
 
 function GetCurrentTimer(counter) {
     clearInterval(timer)
-        timer = setInterval(() => {
+    timer = setInterval(() => {
         let value_1 = Math.floor(counter / 60)
-        let value_2 = Math.floor(counter % 60) 
+        let value_2 = Math.floor(counter % 60)
         let cart = document.getElementById("timer")
-        cart.innerText = `${value_1}:${value_2<10?"0":""}${value_2}`
-        if(counter<=0){
+        cart.innerText = `${value_1}:${value_2 < 10 ? "0" : ""}${value_2}`
+        if (counter <= 0) {
             clearInterval(timervalue)
-            document.getElementById('resend').disabled =false
-        }else{
+        } else {
             counter--
+        }
+        if (counter >= 1) {
+            document.getElementById('resend').disabled = true
+        } else {
+            document.getElementById('resend').disabled = false
+
         }
     }, 1000);
 }
 let last = document.getElementById("resend")
-last.addEventListener('click',()=> {
-    GetCurrentTimer(current_time)
+last.addEventListener('click', () => {
+    GetCurrentTimer(10)
 
 })
-GetCurrentTimer(60);
+GetCurrentTimer(10);

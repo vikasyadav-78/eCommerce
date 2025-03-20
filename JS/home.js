@@ -22,92 +22,68 @@ function isUserAuthenticated() {
 window.onload = isUserAuthenticated;
 let datas = [
     {
+        id: 1,
         images: "../HomeImages/image 1.png",
         p1: "Syltherine",
         p2: "Stylish cafe chair",
         p3: `Rp 2.500.000 <span class="opacity-50"><del> Rp 3.500.000</del></span>`,
-        btn: "Add to cart",
-        p4: "Share",
-        p5: "Compare",
-        p6: "Like",
         discounts: "-30%"
     },
     {
+        id: 2,
         images: "../HomeImages/bdb0310fb379a6b1828809d2c0652533.png",
         p1: "Leviosa",
         p2: "Stylish cafe chair",
         p3: "Rp 2.500.000",
-        btn: "Add to cart",
-        p4: "Share",
-        p5: "Compare",
-        p6: "Like",
         discounts: "New"
     },
     {
+        id: 3,
         images: "../HomeImages/image 3.png",
         p1: "Lolito",
         p2: "Luxury big sofa",
         p3: `Rp 7.000.000 <span class="opacity-50"><del> Rp 14.000.000</del></span>`,
-        btn: "Add to cart",
-        p4: "Share",
-        p5: "Compare",
-        p6: "Like",
         discounts: "-30%"
     },
     {
+        id: 4,
         images: "../HomeImages/image 4.png",
         p1: "Respira",
         p2: "Outdoor bar table and stool",
         p3: "Rp 500.000",
-        btn: "Add to cart",
-        p4: "Share",
-        p5: "Compare",
-        p6: "Like",
         discounts: "New"
     },
     {
+        id: 5,
         images: "../HomeImages/Images.png",
         p1: "Grifo",
         p2: "Night lamp",
         p3: "Rp 1.500.000",
-        btn: "Add to cart",
-        p4: "Share",
-        p5: "Compare",
-        p6: "Like",
         discounts: "-30%"
     },
     {
+        id: 6,
         images: "../HomeImages/image 6.png",
         p1: "Muggo",
         p2: "Small mug",
         p3: "Rp 150.000",
-        btn: "Add to cart",
-        p4: "Share",
-        p5: "Compare",
-        p6: "Like",
         discounts: "New"
     },
     {
+        id: 7,
         images: "../HomeImages/Images (1).png",
         p1: "Pingky",
         p2: "Cute bed set",
         p3: `Rp 7.000.000 <span class="opacity-50"><del>Rp 14.000.000</del></span>`,
         btn: "Add to cart",
-        p4: "Share",
-        p5: "Compare",
-        p6: "Like",
-    
         discounts: "-30%"
     },
     {
+        id: 8,
         images: "../HomeImages/Images (2).png",
         p1: "Potty",
         p2: "Minimalist flower pot",
         p3: "Rp 500.000",
-        btn: "Add to cart",
-        p4: "Share",
-        p5: "Compare",
-        p6: "Like",
         discounts: "New"
     }
 ]
@@ -131,13 +107,11 @@ function getData() {
                                 </div>
                                 <div class="topposition p-4">
                                     <div class="text-center ">
-                                        <a href="http://127.0.0.1:5501/HTML/product.html">
-                                            <button class="upcart"> ${values.btn}</button>
-                                        </a>
+                                            <button class="upcart" id="upcart" onclick="addCartItem()">Add to cart</button>
                                         <div class="d-flex gap-3 text-light mt-3">
-                                            <p><i class="fa-solid fa-share-nodes"></i> ${values.p4}</p>
-                                            <p><i class="fa-solid fa-arrow-right-arrow-left"></i> ${values.p5}</p>
-                                            <p><i class="fa-regular fa-heart"></i> ${values.p6}</p>
+                                            <p><i class="fa-solid fa-share-nodes"></i>Share</p>
+                                            <p><i class="fa-solid fa-arrow-right-arrow-left"></i>Compare</p>
+                                            <p><i class="fa-regular fa-heart"></i>Like</p>
                                         </div>
                                     </div>
                                 </div>
@@ -191,10 +165,17 @@ setTimeout(() => {
     let divRow = document.getElementById("div-row");
     divRow.style.display = "none"
 }, 0);
-
 setTimeout(() => {
     let mainRow = document.getElementById("main-row");
     mainRow.style.display = "none"
     let divRow = document.getElementById("div-row");
     divRow.style.display = "flex"
 }, 3000);
+
+
+function addCartItem() {
+    let addCart = document.getElementById("upcart");
+    addCart.addEventListener('click', () => {
+        alert("Product Added in cart");
+    })
+}
