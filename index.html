@@ -18,7 +18,7 @@
 <body>
     <header class="position-fixed w-100 top-0"
         style=" backdrop-filter: blur(20px); background-color: transparent; z-index: 999;">
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <div class="d-flex align-items-center gap-2">
                     <img width="30%" src="../productComImages/Meubel House_Logos-05.png" alt="">
@@ -27,10 +27,10 @@
                 <button class="navbar-toggler" style="border: none;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars-progress"></i>
+                    <i class="fa-bars-progress fa-solid"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto gap-4 mb-2 mb-lg-0">
+                    <ul class="navbar-nav gap-4 mb-2 mb-lg-0 mx-auto">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
                                 href="http://127.0.0.1:5501/index.html">Home</a>
@@ -49,13 +49,13 @@
                         </li>
 
                     </ul>
-                    <form class="d-flex gap-3 align-items-center" role="search">
+                    <form class="d-flex align-items-center gap-3" role="search">
                         <img src="../productImage/Vector.png" alt="">
-                        <p class="pt-3"><i class="fa-solid fa-magnifying-glass"></i></p>
-                        <p class="pt-3"><i class="fa-regular fa-heart"></i></p>
+                        <p class="pt-3"><i class="fa-magnifying-glass fa-solid"></i></p>
+                        <p class="pt-3"><i class="fa-heart fa-regular"></i></p>
                         <button class="" style=" border: none; background-color: transparent;" type="button"
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-cart-shopping fa-solid"></i>
                         </button>
                     </form>
                 </div>
@@ -63,14 +63,14 @@
         </nav>
         <div class="offcanvas offcanvas-end offcanvaswidth" tabindex="-1" id="offcanvasRight"
             aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header border-bottom mb-2">
+            <div class="border-bottom mb-2 offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
-                <button type="button" class="btn btn-outline-dark ms-auto border-0" data-bs-dismiss="offcanvas"
-                    aria-label="Close"><i class="fa-solid fa-bag-shopping fs-3"></i></button>
+                <button type="button" class="btn btn-outline-dark border-0 ms-auto" data-bs-dismiss="offcanvas"
+                    aria-label="Close"><i class="fa-bag-shopping fa-solid fs-3"></i></button>
             </div>
             <div class="offcanvas-body">
                 <div>
-                    <div class="d-flex w-100 align-items-center gap-4">
+                    <div class="d-flex align-items-center w-100 gap-4">
                         <div style="background-color: #efe6d1; width: 50%; border-radius: 10px;">
                             <img width="100%" src="../productComImages/Asgaard sofa 3.png" alt="">
                         </div>
@@ -83,10 +83,10 @@
                             </div>
                         </div>
                         <div>
-                            <p><i class="fa-regular fa-circle-xmark"></i></p>
+                            <p><i class="fa-circle-xmark fa-regular"></i></p>
                         </div>
                     </div>
-                    <div class="d-flex w-100 align-items-center gap-4 mt-3">
+                    <div class="d-flex align-items-center w-100 gap-4 mt-3">
                         <div style="background-color: #efe6d1; width: 50%; border-radius: 10px;">
                             <img style="border-radius: 10px;" width="100%" src="../productComImages/Asgaard sofa 5.png"
                                 alt="">
@@ -100,25 +100,30 @@
                             </div>
                         </div>
                         <div>
-                            <p><i class="fa-regular fa-circle-xmark"></i></p>
+                            <p><i class="fa-circle-xmark fa-regular"></i></p>
                         </div>
                     </div>
+                    
+                    <div id="addedCart">
+
+                    </div>
+
                 </div>
             </div>
-            <div class="carts px-3 pb-5 mb-3 border-top mt-4">
-                <div class="pt-3 border-bottom">
+            <div class="border-top carts mb-3 mt-4 pb-5 px-3">
+                <div class="border-bottom pt-3">
                     <div class="d-flex align-items-center justify-content-between">
                         <p>Subtotal</p>
                         <p style="color: #b88e2f;">Rs. 520,000.00</p>
                     </div>
                 </div>
 
-                <div class="mt-3 d-flex justify-content-around align-items-center gap-2">
-                    <a href="http://127.0.0.1:5501/HTML/carts.html"><button class="px-4 py-1 rounded-5"
+                <div class="d-flex align-items-center justify-content-around gap-2 mt-3">
+                    <a href="http://127.0.0.1:5501/HTML/carts.html"><button class="rounded-5 px-4 py-1"
                             style="background-color: transparent; border: 1px solid;width: 100%;">Cart</button></a>
-                    <a href="http://127.0.0.1:5501/HTML/checkout.html"><button class="px-4 py-1 rounded-5"
+                    <a href="http://127.0.0.1:5501/HTML/checkout.html"><button class="rounded-5 px-4 py-1"
                             style="background-color: transparent; border: 1px solid;width: 100%;">Checkout</button></a>
-                    <a href="http://127.0.0.1:5501/HTML/productComparison.html"><button class="px-4 py-1 rounded-5"
+                    <a href="http://127.0.0.1:5501/HTML/productComparison.html"><button class="rounded-5 px-4 py-1"
                             style="background-color: transparent; border: 1px solid;width: 100%;">Comparison</button></a>
                 </div>
             </div>
@@ -126,26 +131,26 @@
     </header>
     <main style="margin-top: 100px;">
         <section style="margin-top: -48px;">
-            <div class="main-back p-5 d-flex justify-content-end align-items-center me-5 mt-5">
-                <div class="mt-5 p-3 pb-4 mainchild">
+            <div class="d-flex align-items-center justify-content-end p-5 main-back me-5 mt-5">
+                <div class="p-3 mainchild mt-5 pb-4">
                     <p class="fw-bold">New Arrival</p>
                     <p class="fs-1 fw-bold" style="color: #b88e2f; margin-top: -20px;">Discover Our <br> New Collection
                     </p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
                         mattis.</p>
-                    <button class="button py-2 px-4 ">BUY Now</button>
+                    <button class="button px-4 py-2">BUY Now</button>
                 </div>
             </div>
         </section>
         <section class="medianone" style="margin-top: -48px;">
-            <div class="px-3 d-flex justify-content-center align-items-center mt-5">
-                <div class="mt-5 p-5 sectionNone">
+            <div class="d-flex align-items-center justify-content-center mt-5 px-3">
+                <div class="p-5 mt-5 sectionNone">
                     <p class="fw-bold">New Arrival</p>
                     <p class="fs-1 fw-bold" style="color: #b88e2f; margin-top: -20px;">Discover Our <br> New Collection
                     </p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
                         mattis.</p>
-                    <button class="button p-2">BUY Now</button>
+                    <button class="p-2 button">BUY Now</button>
                 </div>
             </div>
 
@@ -158,19 +163,19 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
                             <div>
                                 <img width="100%" src="../HomeImages/image 106.png" alt="">
                                 <p class="text-center fw-semibold mt-3">Dining</p>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
                             <div>
                                 <img width="100%" src="../HomeImages/Image-living room.png" alt="">
                                 <p class="text-center fw-semibold mt-3">Living</p>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+                        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
                             <div>
                                 <img width="100%" src="../HomeImages/Mask Group.png" alt="">
                                 <p class="text-center fw-semibold mt-3">Bedroom</p>
@@ -183,7 +188,7 @@
         <section>
             <div class="mt-5">
                 <div>
-                    <p class="fs-3 text-center fw-bold">Our Products</p>
+                    <p class="text-center fs-3 fw-bold">Our Products</p>
                 </div>
 
 
@@ -203,7 +208,7 @@
         <section>
             <div class="container-fluid p-5 mt-5" style="background-color: #fcf8f3;">
                 <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-4 col-lg-4 mt-4">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mt-4">
                         <div>
                             <p class="fs-2 fw-bold">50+ Beautiful rooms
                                 inspiration</p>
@@ -211,21 +216,21 @@
                             <button class="Explore px-4 py-2">Explore More</button>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-4 col-lg-4 mt-4">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mt-4">
                         <div class="position-relative">
                             <img width="100%" src="../HomeImages/Rectangle 24.png" alt="">
-                            <div class="bedclass d-flex align-items-end">
-                                <div class="bedroom p-3">
+                            <div class="d-flex align-items-end bedclass">
+                                <div class="p-3 bedroom">
                                     <p>01-- Bed Room</p>
                                     <p class="fs-5 fw-bold">Inner Peace</p>
                                 </div>
-                                <div class="arrow-right p-2">
-                                    <p class="mt-3"><i class="fa-solid fa-arrow-right"></i></p>
+                                <div class="p-2 arrow-right">
+                                    <p class="mt-3"><i class="fa-arrow-right fa-solid"></i></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-4 col-lg-4 mt-4">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mt-4">
                         <div>
                             <img width="100%" src="../HomeImages/Rectangle 25.png" alt="">
                             <img class="mt-3" style="object-fit: cover;" width="30%" src="../HomeImages/Indicator.png"
@@ -242,9 +247,9 @@
                     <p class="fs-3 fw-bold">#FuniroFurniture</p>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-5 mt-4 overflow-hidden">
+                    <div class="col-lg-5 col-md-12 col-sm-12 mt-4 overflow-hidden">
                         <div>
-                            <div class="d-flex w-100 gap-1 align-items-end">
+                            <div class="d-flex align-items-end w-100 gap-1">
                                 <img width="100%" height="300vh" style="object-fit: contain;"
                                     src="../HomeImages/Rectangle 36.png" alt="">
                                 <img width="70%" height="50%" style="object-fit: cover;"
@@ -258,13 +263,13 @@
                         </div>
 
                     </div>
-                    <div class="col-sm-12 col-md-8 col-lg-2 mt-4 d-flex align-items-center justify-content-center mb-5">
+                    <div class="col-lg-2 col-md-8 col-sm-12 d-flex align-items-center justify-content-center mb-5 mt-4">
                         <div class="" style="width: 100%;">
                             <img width="100%" height="100%" src="../HomeImages/Rectangle 40.png" alt="">
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-5 mt-4">
-                        <div class="d-flex gap-2 align-items-end" style="width: 100%;">
+                    <div class="col-lg-5 col-md-12 col-sm-12 mt-4">
+                        <div class="d-flex align-items-end gap-2" style="width: 100%;">
                             <img width="50%" height="100%" src="../HomeImages/Rectangle 43.png" alt="">
                             <img width="50%" height="100%" src="../HomeImages/Rectangle 45.png" alt="">
                         </div>
@@ -283,44 +288,44 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                <div class="col-lg-4 col-md-6 col-sm-6 mt-3">
                     <div>
-                        <p class="fw-bold fs-5 hoverUnderline">Funiro.</p>
+                        <p class="fs-5 fw-bold hoverUnderline">Funiro.</p>
                         <p class="hoverUnderline">400 University Drive Suite 200 Coral Gables,
                             FL 33134 USA</p>
 
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-2 mt-3">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-3">
                     <div>
-                        <p class="opacity-50 hoverUnderline">Links</p>
+                        <p class="hoverUnderline opacity-50">Links</p>
                         <a href="http://127.0.0.1:5501/index.html" class="text-dark text-decoration-none">
-                            <p class="mt-3 hoverUnderline">Home</p>
+                            <p class="hoverUnderline mt-3">Home</p>
                         </a>
 
                         <a href="http://127.0.0.1:5501/HTML/Shop.html" class="text-dark text-decoration-none">
-                            <p class="mt-3 hoverUnderline">Shop</p>
+                            <p class="hoverUnderline mt-3">Shop</p>
                         </a>
                         <a href="http://127.0.0.1:5501/HTML/blog.html" class="text-dark text-decoration-none">
-                            <p class="mt-3 hoverUnderline">About</p>
+                            <p class="hoverUnderline mt-3">About</p>
                         </a>
                         <a href="http://127.0.0.1:5501/HTML/contact.html" class="text-dark text-decoration-none">
-                            <p class="mt-3 hoverUnderline">Contact</p>
+                            <p class="hoverUnderline mt-3">Contact</p>
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-2 mt-3">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-3">
                     <div>
-                        <p class="opacity-50 hoverUnderline">Help</p>
-                        <p class="mt-3 hoverUnderline">Payment Options</p>
-                        <p class="mt-3 hoverUnderline">Returns</p>
-                        <p class="mt-3 hoverUnderline">Privacy Policies</p>
+                        <p class="hoverUnderline opacity-50">Help</p>
+                        <p class="hoverUnderline mt-3">Payment Options</p>
+                        <p class="hoverUnderline mt-3">Returns</p>
+                        <p class="hoverUnderline mt-3">Privacy Policies</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                <div class="col-lg-4 col-md-6 col-sm-6 mt-3">
                     <div>
-                        <p class="opacity-50 ms-4 hoverUnderline">Newsletter</p>
-                        <div class="me-4 d-flex align-items-center justify-content-center gap-2">
+                        <p class="hoverUnderline ms-4 opacity-50">Newsletter</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 me-4">
                             <form action="">
                                 <input type="search" required class="emailButton"
                                     placeholder="Enter Your Email Address">

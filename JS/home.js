@@ -93,25 +93,25 @@ function getData() {
     datas.map((values) => {
         main_row.innerHTML += `
                         <div class="col-lg-3 col-md-4 col-sm-6 mt-3">
-                            <div class="bg-body-secondary mainorder position-relative overflow-hidden"
+                            <div class="bg-body-secondary position-relative mainorder overflow-hidden"
                                 style="height: 100%;">
                                 <img width="100%" height="70%" style="object-fit: cover;"
                                     src="${values.images}" alt="">
                                 <div class="positions">
-                                    <p class="up p-4">${values.discounts}</p>
+                                    <p class="p-4 up">${values.discounts}</p>
                                 </div>
                                 <div class="p-3 mediatext">
-                                    <p class="fw-bold fs-5" style="margin-top: -10px;">${values.p1}</p>
+                                    <p class="fs-5 fw-bold" style="margin-top: -10px;">${values.p1}</p>
                                     <p class="opacity-75" style="margin-top: -10px;">${values.p2}</p>
                                     <p class="fw-bold" style="margin-top: -10px;">${values.p3}</p>
                                 </div>
-                                <div class="topposition p-4">
-                                    <div class="text-center ">
+                                <div class="p-4 topposition">
+                                    <div class="text-center">
                                             <button class="upcart" id="upcart" onclick="addCartItem()">Add to cart</button>
-                                        <div class="d-flex gap-3 text-light mt-3">
-                                            <p><i class="fa-solid fa-share-nodes"></i>Share</p>
-                                            <p><i class="fa-solid fa-arrow-right-arrow-left"></i>Compare</p>
-                                            <p><i class="fa-regular fa-heart"></i>Like</p>
+                                        <div class="d-flex text-light gap-3 mt-3">
+                                            <p><i class="fa-share-nodes fa-solid"></i>Share</p>
+                                            <p><i class="fa-arrow-right-arrow-left fa-solid"></i>Compare</p>
+                                            <p><i class="fa-heart fa-regular"></i>Like</p>
                                         </div>
                                     </div>
                                 </div>
@@ -177,5 +177,37 @@ function addCartItem() {
     let addCart = document.getElementById("upcart");
     addCart.addEventListener('click', () => {
         alert("Product Added in cart");
+        productAddForCart()
+    })
+}
+
+
+let addedCart = document.getElementById("addedCart");
+function productAddForCart(){
+    datas.map((value)=> {
+        addedCart.innerHTML +=  `
+            <div class="d-flex align-items-center w-100 gap-4 mt-5">
+                        <div style="background-color: #efe6d1; width: 50%; border-radius: 10px;">
+                            <img style="border-radius: 10px; object-fit: cover;" width="100%" src="${value.images}"
+                                alt="">
+                        </div>
+                        <div style="width: 50%;">
+                            <p class="fw-bold">${value.p1}</p>
+                                <p>${value.p3}</p>
+                        </div>
+                        <div>
+                            <button id="deleteCartProduct" onclick="deleteCartProducts()"><i class="fa-circle-xmark fa-regular"></i></button>
+                        </div>
+                    </div>
+        `
+    })
+   
+}
+
+function deleteCartProducts(){
+    let deleteCartProduct = document.getElementById("deleteCartProduct");
+
+    deleteCartProduct.addEventListener("click",()=>{
+        addedCart.innerHTML = ""
     })
 }
