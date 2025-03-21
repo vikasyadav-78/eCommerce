@@ -26,7 +26,7 @@ let datas = [
         images: "../HomeImages/image 1.png",
         p1: "Syltherine",
         p2: "Stylish cafe chair",
-        p3: `Rp 2.500.000 <span class="opacity-50"><del> Rp 3.500.000</del></span>`,
+        p3: `Rp 2.500.000 <br> <span class="opacity-50"><del> Rp 3.500.000</del></span>`,
         discounts: "-30%"
     },
     {
@@ -42,7 +42,7 @@ let datas = [
         images: "../HomeImages/image 3.png",
         p1: "Lolito",
         p2: "Luxury big sofa",
-        p3: `Rp 7.000.000 <span class="opacity-50"><del> Rp 14.000.000</del></span>`,
+        p3: `Rp 7.000.000 <br> <span class="opacity-50"><del> Rp 14.000.000</del></span>`,
         discounts: "-30%"
     },
     {
@@ -74,7 +74,7 @@ let datas = [
         images: "../HomeImages/Images (1).png",
         p1: "Pingky",
         p2: "Cute bed set",
-        p3: `Rp 7.000.000 <span class="opacity-50"><del>Rp 14.000.000</del></span>`,
+        p3: `Rp 7.000.000 <br> <span class="opacity-50"><del>Rp 14.000.000</del></span>`,
         btn: "Add to cart",
         discounts: "-30%"
     },
@@ -87,6 +87,8 @@ let datas = [
         discounts: "New"
     }
 ]
+
+
 
 let main_row = document.getElementById("div-row")
 function getData() {
@@ -183,9 +185,9 @@ function addCartItem() {
 
 
 let addedCart = document.getElementById("addedCart");
-function productAddForCart(){
-    datas.map((value)=> {
-        addedCart.innerHTML +=  `
+function productAddForCart() {
+    datas.map((value) => {
+        addedCart.innerHTML += `
             <div class="d-flex align-items-center w-100 gap-4 mt-5">
                         <div style="background-color: #efe6d1; width: 50%; border-radius: 10px;">
                             <img style="border-radius: 10px; object-fit: cover;" width="100%" src="${value.images}"
@@ -201,13 +203,16 @@ function productAddForCart(){
                     </div>
         `
     })
-   
+
 }
 
-function deleteCartProducts(){
+function deleteCartProducts() {
     let deleteCartProduct = document.getElementById("deleteCartProduct");
 
-    deleteCartProduct.addEventListener("click",()=>{
+    deleteCartProduct.addEventListener("click", () => {
         addedCart.innerHTML = ""
     })
 }
+
+
+
