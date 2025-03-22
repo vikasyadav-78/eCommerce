@@ -89,7 +89,6 @@ let datas = [
 ]
 
 
-
 let main_row = document.getElementById("div-row")
 function getData() {
     datas.map((values) => {
