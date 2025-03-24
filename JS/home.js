@@ -207,11 +207,8 @@ function productAddForCart() {
 
 function deleteCartProducts() {
     let deleteCartProduct = document.getElementById("deleteCartProduct");
-
     deleteCartProduct.addEventListener("click", () => {
         addedCart.innerHTML = ""
     })
 }
-
-
 
