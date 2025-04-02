@@ -60,11 +60,13 @@ body {
     width: 60%;
     transition: all .5s ease;
 }
-.upcart:hover{
+
+.upcart:hover {
     background-color: #b88e2f;
     color: #ffff;
     border: 2px solid #b88e2f;
 }
+
 .positions2 {
     position: absolute;
     right: 20px;
@@ -95,7 +97,8 @@ body {
     border-radius: 2px;
     transition: all 0.5s ease;
 }
-.button:hover{
+
+.button:hover {
     color: #fff;
     border: 2px solid #b88e2f;
     background-color: #b88e2f;
@@ -114,4 +117,5 @@ body {
 @media (max-width:768px) {
     .marginTop {
         margin-top: -100px !important;
-    }}
+    }
+}

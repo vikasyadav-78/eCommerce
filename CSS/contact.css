@@ -12,20 +12,23 @@ body {
     height: 100%;
     width: 100%;
 }
-.Abc{
+
+.Abc {
     border: 1.5px solid #0000005b;
     width: 50%;
     outline: none;
 }
-.button{
+
+.button {
     background-color: #b88e2f;
-    border: 2px solid ;
+    border: 2px solid;
     transition: all 0.5s ease;
     color: #ffff;
     font-weight: bold;
-    
+
 }
-.button:hover{
+
+.button:hover {
     background-color: transparent;
     border: 2px solid #b88e2f;
     color: #000;
@@ -35,8 +38,8 @@ body {
 
 
 
-@media(max-width:992px){
-    .Abc{
+@media(max-width:992px) {
+    .Abc {
         width: 100%;
     }
 }

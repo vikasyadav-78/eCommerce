@@ -167,13 +167,14 @@ input:focus {
 .switch-link:hover {
     text-decoration: underline;
 }
+
 .switch-text {
     text-align: center;
     margin-top: 1.5rem;
     font-size: 0.875rem;
     color: white;
-  }
-  
+}
+
 
 .text-decoraion {
     text-decoration: none;

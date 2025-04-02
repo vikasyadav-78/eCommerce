@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,22 +12,25 @@ body {
     height: 100%;
     width: 100%;
 }
-.button2{
+
+.button2 {
     border: 1.5px solid #dddddd;
     background-color: transparent;
 
 }
-.back{
+
+.back {
     background-color: #efe6d1;
 }
 
-.checkOut{
+.checkOut {
     border: 1.5px solid #84807a;
     background-color: transparent;
     transition: all .2s ease;
 }
-.checkOut:hover{
+
+.checkOut:hover {
     background-color: #b88e2f;
-    color: #fff;  
-    border: 1.5px solid transparent;  
+    color: #fff;
+    border: 1.5px solid transparent;
 }

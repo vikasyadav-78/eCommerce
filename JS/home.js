@@ -182,7 +182,6 @@ function addCartItem() {
     })
 }
 
-
 let addedCart = document.getElementById("addedCart");
 function productAddForCart() {
     datas.map((value) => {

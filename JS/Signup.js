@@ -105,11 +105,11 @@ function signInRequest(moblie, password) {
             } else if (!result.success) {
                 console.log(error.explanation[0])
             } else {
-                
+
                 console.log("something went wrong please try again later")
             }
         })
-        .catch((error) =>{
+        .catch((error) => {
             alert("Something went wrong")
             console.error(error)
         });

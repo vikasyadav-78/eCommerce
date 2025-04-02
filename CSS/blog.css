@@ -12,11 +12,13 @@ body {
     height: 100%;
     width: 100%;
 }
-.more{
+
+.more {
     text-decoration: underline;
     color: black;
 }
-.iconSearch{
+
+.iconSearch {
     display: flex;
     align-items: center;
     border: 1.5px solid #00000065;
@@ -26,17 +28,20 @@ body {
     gap: 30px;
 
 }
-.iconSearch input{
+
+.iconSearch input {
     outline: none;
     border: none;
 }
-.button2{
+
+.button2 {
     background-color: #f9f1e7;
     color: #000;
     border: none;
     border-radius: 7px;
 }
-.button1{
+
+.button1 {
     background-color: #b88e2f;
     color: #000;
     border: none;
