@@ -1,180 +1,93 @@
-let uuid = localStorage.getItem("uuid")
+// Require that signup set a uuid marker
+let uuid = sessionStorage.getItem("uuid");
 if (!uuid) {
-    window.location.href = "/HTML/signUp.html"
+  window.location.href = "/HTML/signUp.html";
 }
 
+const otpInputs = Array.from({length:6}, (_,i) => document.getElementById(`otp-${i+1}`));
+const verifyBtn = document.getElementById('verify-btn');
+const resendBtn = document.getElementById('resend');
+const timerEl = document.getElementById('timer');
 
-let otp1 = document.getElementById("otp-1");
-let otp2 = document.getElementById("otp-2");
-let otp3 = document.getElementById("otp-3");
-let otp4 = document.getElementById("otp-4");
-let otp5 = document.getElementById("otp-5");
-let otp6 = document.getElementById("otp-6");
-
-otp1.addEventListener('input', function (e) {
-    if (e.target.value.length > 1) {
-        document.getElementById("otp-1").value = e.target.value[0]
+otpInputs.forEach((input, idx) => {
+  input.addEventListener('input', (e) => {
+    const val = e.target.value.replace(/[^0-9]/g, '');
+    e.target.value = val;
+    if (val.length === 1 && idx < otpInputs.length - 1) otpInputs[idx+1].focus();
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace' && !e.target.value && idx > 0) {
+      otpInputs[idx-1].focus();
     }
-    else if (e.target.value.length == 1) {
-        document.getElementById("otp-1").blur()
-        document.getElementById("otp-2").focus()
-    }
-});
-otp2.addEventListener('input', function (e) {
-    if (e.target.value.length > 1) {
-        document.getElementById("otp-2").value = e.target.value[0]
-    }
-    else if (e.target.value.length == 1) {
-        document.getElementById("otp-2").blur()
-        document.getElementById("otp-3").focus()
-    } else if (e.target.value.length == 0) {
-        document.getElementById("otp-2").blur()
-        document.getElementById("otp-1").focus()
-    }
-});
-otp2.addEventListener('keydown', function (e) {
-    if (e.key == "Backspace" && e.target.value.length == 0) {
-        document.getElementById("otp-2").blur()
-        document.getElementById("otp-1").focus()
-    }
-});;
-otp3.addEventListener('input', function (e) {
-    if (e.target.value.length > 1) {
-        document.getElementById("otp-3").value = e.target.value[0]
-    }
-    else if (e.target.value.length == 1) {
-        document.getElementById("otp-3").blur()
-        document.getElementById("otp-4").focus()
-    } else if (e.target.value.length == 0) {
-        document.getElementById("otp-3").blur()
-        document.getElementById("otp-2").focus()
-    }
-});
-otp3.addEventListener('keydown', function (e) {
-    if (e.key == "Backspace" && e.target.value.length == 0) {
-        document.getElementById("otp-3").blur()
-        document.getElementById("otp-2").focus()
-    }
-});
-otp4.addEventListener('input', function (e) {
-    if (e.target.value.length > 1) {
-        document.getElementById("otp-4").value = e.target.value[0]
-    }
-    else if (e.target.value.length == 1) {
-        document.getElementById("otp-4").blur()
-        document.getElementById("otp-5").focus()
-    } else if (e.target.value.length == 0) {
-        document.getElementById("otp-4").blur()
-        document.getElementById("otp-3").focus()
-    }
-});
-otp4.addEventListener('keydown', function (e) {
-    if (e.key == "Backspace" && e.target.value.length == 0) {
-        document.getElementById("otp-4").blur()
-        document.getElementById("otp-3").focus()
-    }
-});
-otp5.addEventListener('input', function (e) {
-    if (e.target.value.length > 1) {
-        document.getElementById("otp-5").value = e.target.value[0]
-    }
-    else if (e.target.value.length == 1) {
-        document.getElementById("otp-5").blur()
-        document.getElementById("otp-6").focus()
-    } else if (e.target.value.length == 0) {
-        document.getElementById("otp-5").blur()
-        document.getElementById("otp-4").focus()
-    }
-});
-otp5.addEventListener('keydown', function (e) {
-    if (e.key == "Backspace" && e.target.value.length == 0) {
-        document.getElementById("otp-5").blur()
-        document.getElementById("otp-4").focus()
-    }
-});
-otp6.addEventListener('input', function (e) {
-    if (e.target.value.length > 1) {
-        document.getElementById("otp-6").value = e.target.value[0]
-    }
-    else if (e.target.value.length == 0) {
-        document.getElementById("otp-6").blur()
-        document.getElementById("otp-5").focus()
-    } else if (e.target.value.length == 1) {
-        document.getElementById("otp-6").blur()
-    }
-});
-otp6.addEventListener('keydown', function (e) {
-    if (e.key == "Backspace" && e.target.value.length == 0) {
-        document.getElementById("otp-6").blur()
-        document.getElementById("otp-5").focus()
-    }
+  });
 });
 
-let getOtpBtn = document.querySelector(".submit-btn");
-getOtpBtn.addEventListener('click', () => {
-    let otp1 = document.getElementById("otp-1");
-    let otp2 = document.getElementById("otp-2");
-    let otp3 = document.getElementById("otp-3");
-    let otp4 = document.getElementById("otp-4");
-    let otp5 = document.getElementById("otp-5");
-    let otp6 = document.getElementById("otp-6");
-    if ([otp1, otp2, otp3, otp4, otp5, otp6].every(input => input.value.length === 1)) {
-        window.location = "/index.html";
-    } else {
-        alert("Please enter a valid OTP");
-    }
-
-})
-
-// let timer = true;
-// function timerRang(remaining) {
-//     let m = Math.floor(remaining / 60);
-//     let s = remaining % 60;
-//     m = m < 10 ? '0' + m : m;
-//     s = s < 10 ? '0' + s : s;
-//     document.getElementById("timer").innerHTML = "resend otp : " + m + ':' + s;
-//     remaining -= 1;
-//     if (remaining >= 0 && timer) {
-//         setTimeout(function () {
-//             timerRang(remaining);
-//         }, 1000);
-//         return;
-//     }
-//     if (!timer) {
-//         return;
-//     }
-//     alert("OTP Time's Over")
-// }
-// timerRang(120)
-
-
-
-var timer;
-// var current_time = 60 
-
-function GetCurrentTimer(counter) {
-    clearInterval(timer)
-    timer = setInterval(() => {
-        let value_1 = Math.floor(counter / 60)
-        let value_2 = Math.floor(counter % 60)
-        let cart = document.getElementById("timer")
-        cart.innerText = `${value_1}:${value_2 < 10 ? "0" : ""}${value_2}`
-        if (counter <= 0) {
-            clearInterval(timervalue)
-        } else {
-            counter--
-        }
-        if (counter >= 1) {
-            document.getElementById('resend').disabled = true
-        } else {
-            document.getElementById('resend').disabled = false
-
-        }
-    }, 1000);
+function getEnteredOtp() {
+  return otpInputs.map(i => i.value).join('');
 }
-let last = document.getElementById("resend")
-last.addEventListener('click', () => {
-    GetCurrentTimer(10)
 
-})
-GetCurrentTimer(10);
+verifyBtn.addEventListener('click', () => {
+  const entered = getEnteredOtp();
+  const generated = sessionStorage.getItem('signup_generated_otp');
+  if (!generated) {
+    alert('No OTP found. Please request a new OTP.');
+    return;
+  }
+  if (entered === generated) {
+    sessionStorage.removeItem('signup_generated_otp');
+    sessionStorage.removeItem('signup_email');
+    sessionStorage.removeItem('uuid');
+    alert('OTP verified successfully! Redirecting...');
+    window.location.href = '/index.html';
+  } else {
+    alert('Invalid OTP. Please check and try again.');
+  }
+});
+
+// Timer + resend
+let countdown = 60;
+let timer;
+function startTimer(seconds) {
+  clearInterval(timer);
+  countdown = seconds;
+  timerEl.innerText = formatTime(countdown);
+  resendBtn.disabled = true;
+  timer = setInterval(() => {
+    countdown--;
+    timerEl.innerText = formatTime(countdown);
+    if (countdown <= 0) {
+      clearInterval(timer);
+      resendBtn.disabled = false;
+      timerEl.innerText = '';
+    }
+  }, 1000);
+}
+function formatTime(s) {
+  const m = Math.floor(s/60);
+  const sec = s % 60;
+  return `${m}:${sec < 10 ? '0' : ''}${sec}`;
+}
+
+resendBtn.addEventListener('click', async () => {
+  const email = sessionStorage.getItem('signup_email');
+  if (!email) {
+    alert('No email found. Please signup again.');
+    window.location.href = '/HTML/signUp.html';
+    return;
+  }
+  const otp = Math.floor(100000 + Math.random() * 900000).toString();
+  sessionStorage.setItem('signup_generated_otp', otp);
+
+  try {
+    // resend via EmailJS - replace TEMPLATE_ID above as well
+    await emailjs.send('e-commerce-project', 'TEMPLATE_ID', { to_email: email, otp });
+    alert('OTP resent to ' + email);
+    startTimer(60);
+  } catch (err) {
+    console.error(err);
+    alert('Failed to resend OTP. Check console.');
+  }
+});
+
+// start timer immediately
+startTimer(60);

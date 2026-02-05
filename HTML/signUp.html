@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign Up</title>
   <link rel="stylesheet" href="../CSS/signUp.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -17,33 +15,35 @@
       <img src="../productComImages/Meubel House_Logos-05.png" alt="">
       <p>Furniro</p>
     </div>
+
     <div class="card">
       <div class="tabs">
         <input type="radio" name="tabs" id="signup" checked>
         <div class="content signup-content">
           <h2>Create your account</h2>
-          <form action="" id="signin-form">
+          <form id="signup-form" onsubmit="return false;">
             <div class="input-group">
-              <label>Mobile</label>
+              <label>Email</label>
               <div class="input-with-icon">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <input type="number" placeholder="9876543210" required id="input-number">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="user@gmail.com" required id="email-input" name="email">
               </div>
             </div>
+
             <div class="input-group">
               <label>Password</label>
               <div class="input-with-icon">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="••••••••" required id="password-input">
-                <i class="fa-solid fa-eye password-Show"></i>
-                <i class="fa-solid fa-eye-slash hide-password"></i>
+                <input type="password" placeholder="••••••••" required id="password-input" name="password">
+                <i class="fa-solid fa-eye password-Show" style="cursor:pointer"></i>
+                <i class="fa-solid fa-eye-slash hide-password" style="display:none;cursor:pointer"></i>
               </div>
             </div>
-            <button type="submit" class="submit-btn" id="submit-btn">
+
+            <button type="button" class="submit-btn" id="submit-btn">
               Get OTP
               <i class="fa-solid fa-arrow-right"></i>
             </button>
-
           </form>
         </div>
       </div>
@@ -51,14 +51,21 @@
 
     <div class="notAccount">
       <p>Have an account?</p>
-      <a class="text-decoraion" href="http://127.0.0.1:5501/HTML/logIn.html">
-        <p class="switch-text">
-          <label for="signin" class="switch-link">Sign In</label>
-        </p>
+      <a class="text-decoraion" href="./logIn.html">
+        <p class="switch-text"><label for="signin" class="switch-link">Sign In</label></p>
       </a>
     </div>
   </div>
-</body>
-<script type="module" src="../JS/Signup.js"></script>
 
+  <!-- EmailJS SDK: MUST be loaded before calling emailjs.init(...) -->
+  <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+  <script>
+    // Replace with your EmailJS Public Key (keep as string)
+    // Example: emailjs.init("pA3KJH7xJkLxxxxxx");
+    emailjs.init("pA3KJH7xJkLxxxxxx");
+  </script>
+
+  <!-- Signup logic (module so you can import if needed) -->
+  <script type="module" src="../JS/Signup.js"></script>
+</body>
 </html>

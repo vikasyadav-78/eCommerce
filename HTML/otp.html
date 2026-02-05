@@ -1,69 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get OTP</title>
-    <link rel="stylesheet" href="../CSS/otp.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get OTP</title>
+  <link rel="stylesheet" href="../CSS/otp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <div class="container">
-        <div class="mainImage">
-            <img src="../productComImages/Meubel House_Logos-05.png" alt="">
-            <p>Furniro</p>
-        </div>
-        <div class="card">
-            <div class="tabs">
-                <input type="radio" name="tabs" id="signup" checked>
-                <div class="content signup-content">
-                    <h1>Verification Code</h1>
-                    <form action="http://127.0.0.1:5501/index.html">
-                        <div class="input-group">
-                            <label>OTP</label>
-                            <div class="input-with-icon">
-                                <div class="otp-Input-div">
-                                    <div class="otp-input">
-                                        <input type="number" class="otp" min="0" max="9" id="otp-1" required>
-                                    </div>
-                                    <div class="otp-input">
-                                        <input type="number" class="otp" min="0" max="9" id="otp-2" required>
-                                    </div>
-                                    <div class="otp-input">
-                                        <input type="number" class="otp" min="0" max="9" id="otp-3" required>
-                                    </div>
-                                    <div class="otp-input">
-                                        <input type="number" class="otp" min="0" max="9" id="otp-4" required>
-                                    </div>
-                                    <div class="otp-input">
-                                        <input type="number" class="otp" min="0" max="9" id="otp-5" required>
-                                    </div>
-                                    <div class="otp-input">
-                                        <input type="number" class="otp" min="0" max="9" id="otp-6" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            Verify OTP
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </form>
-                    <div class="optTime">
-                        <!-- <a class="reset"  id="resend" href="">reset otp</a> -->
-                        <button style="height: 20px; width: 70px;" id="resend">reset otp</button>
-                        <p id="timer"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="mainImage">
+      <img src="../productComImages/Meubel House_Logos-05.png" alt="">
+      <p>Furniro</p>
     </div>
-</body>
-<script src="../JS/otp.js"></script>
 
+    <div class="card">
+      <div class="tabs">
+        <input type="radio" name="tabs" id="signup" checked>
+        <div class="content signup-content">
+          <h1>Verification Code</h1>
+          <form id="otp-form" onsubmit="return false;">
+            <div class="input-group">
+              <label>OTP</label>
+              <div class="input-with-icon">
+                <div class="otp-Input-div">
+                  <div class="otp-input"><input type="text" class="otp" maxlength="1" id="otp-1" required></div>
+                  <div class="otp-input"><input type="text" class="otp" maxlength="1" id="otp-2" required></div>
+                  <div class="otp-input"><input type="text" class="otp" maxlength="1" id="otp-3" required></div>
+                  <div class="otp-input"><input type="text" class="otp" maxlength="1" id="otp-4" required></div>
+                  <div class="otp-input"><input type="text" class="otp" maxlength="1" id="otp-5" required></div>
+                  <div class="otp-input"><input type="text" class="otp" maxlength="1" id="otp-6" required></div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="submit-btn" id="verify-btn">
+              Verify OTP
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+
+          <div class="optTime">
+            <button id="resend" style="height:28px;width:90px">Resend OTP</button>
+            <p id="timer"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../JS/otp.js"></script>
+</body>
 </html>

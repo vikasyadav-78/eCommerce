@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In</title>
   <link rel="stylesheet" href="../CSS/logIn.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
   <div class="container">
     <div class="mainImage">
       <img src="../productComImages/Meubel House_Logos-05.png" alt="">
       <p>Furniro</p>
     </div>
+
     <div class="card">
       <div class="tabs">
         <input type="radio" name="tabs" id="signup" checked>
         <div class="content signup-content">
           <h2>Welcome back !</h2>
-          <form action="" id="signin-form">
+          <form id="login-form" onsubmit="return false;">
             <div class="input-group">
-              <label>Mobile</label>
+              <label>Email</label>
               <div class="input-with-icon">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <input type="number" placeholder="9876543210" name="number" required id="input-number">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="user@gmail.com" name="email" required id="input-number">
               </div>
             </div>
+
             <div class="input-group">
               <label>Password</label>
               <div class="input-with-icon">
                 <i class="fa-solid fa-lock"></i>
                 <input type="password" placeholder="••••••••" name="password" required id="password-input">
                 <i class="fa-solid fa-eye password-Show"></i>
-                <i class="fa-solid fa-eye-slash hide-password"></i>
+                <i class="fa-solid fa-eye-slash hide-password" style="display:none"></i>
               </div>
             </div>
-            <button type="submit" class="submit-btn" onclick="getInputNumberFrom()">
-              Log in
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
+
+            <button type="button" class="submit-btn" id="login-btn">Log in <i class="fa-solid fa-arrow-right"></i></button>
           </form>
         </div>
       </div>
@@ -50,14 +46,12 @@
 
     <div class="notAccount">
       <p>Don't Have an account?</p>
-      <a class="text-decoraion" href="http://127.0.0.1:5501/HTML/signUp.html">
-        <p class="switch-text">
-          <label for="signin" class="switch-link">Sign Up</label>
-        </p>
+      <a class="text-decoraion" href="./signUp.html">
+        <p class="switch-text"><label for="signin" class="switch-link">Sign Up</label></p>
       </a>
     </div>
   </div>
-</body>
-<script src="../JS/logIn.js"></script>
 
+  <script src="../JS/logIn.js"></script>
+</body>
 </html>

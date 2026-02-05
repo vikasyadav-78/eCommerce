@@ -201,7 +201,6 @@ function productAddForCart() {
                     </div>
         `
     })
-
 }
 
 function deleteCartProducts() {
